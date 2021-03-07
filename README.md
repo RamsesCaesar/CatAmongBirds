@@ -1,4 +1,4 @@
-# GameTutorial
+# Fox Among Bats Game
 A game, made through watching the Godot tutorial by HeartBeast
 
 Changelog:
