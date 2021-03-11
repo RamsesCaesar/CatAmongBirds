@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/DotGothic16-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/RestartButton.gd" type="Script" id=2]
+[ext_resource path="res://UI/icons8-refresh-24.png" type="Texture" id=3]
+[ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=4]
+[ext_resource path="res://UI/DefeatScreen.gd" type="Script" id=5]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="DefeatScreen" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 26.0
+margin_top = 36.0
+margin_right = 306.0
+margin_bottom = 148.0
+hint_tooltip = "Close the game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 94.0
+margin_top = 31.0
+margin_right = 188.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 94.0
+margin_top = 68.0
+margin_right = 246.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="Panel"]
+margin_left = 46.0
+margin_top = 68.0
+margin_right = 82.0
+margin_bottom = 98.0
+icon = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="Panel" instance=ExtResource( 6 )]
+margin_left = 46.0
+margin_top = 30.0
+margin_right = 83.0
+margin_bottom = 60.0
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
