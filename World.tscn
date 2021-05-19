@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://World/GrassBackground2.png" type="Texture" id=3]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=4]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Label.gd" type="Script" id=11]
 [ext_resource path="res://World.gd" type="Script" id=12]
+[ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -495,13 +497,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-
-[sub_resource type="DynamicFontData" id=51]
-font_path = "res://UI/DotGothic16-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=52]
-size = 17
-font_data = SubResource( 51 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 12 )
@@ -992,13 +987,24 @@ margin_right = 77.0
 margin_bottom = 20.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 232.0
-margin_top = 8.0
-margin_right = 295.0
-margin_bottom = 33.0
-custom_fonts/font = SubResource( 52 )
+margin_left = 208.0
+margin_top = 16.0
+margin_right = 302.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 13 )
 text = "Bats: ?"
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 168.0
+margin_right = 82.0
+margin_bottom = 176.0
+custom_fonts/font = ExtResource( 14 )
+text = "Alpha 0.4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
