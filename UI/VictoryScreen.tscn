@@ -1,56 +1,46 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://UI/DotGothic16-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=4]
 [ext_resource path="res://UI/VictoryScreen.gd" type="Script" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+[ext_resource path="res://QuitRestart.tscn" type="PackedScene" id=6]
 
 [node name="VictoryScreen" type="Node2D"]
 script = ExtResource( 5 )
-
-[node name="Panel" type="Panel" parent="."]
-margin_left = 26.0
-margin_top = 36.0
-margin_right = 306.0
-margin_bottom = 148.0
-hint_tooltip = "Close the game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 264.0
-margin_bottom = 67.0
-custom_fonts/font = SubResource( 1 )
-text = "Congratulations!
-You have defeated all the bats!"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="Panel"]
-margin_left = 88.0
-margin_top = 72.0
-margin_right = 240.0
-margin_bottom = 96.0
-custom_fonts/font = SubResource( 1 )
-text = "Click to close game"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" parent="Panel" instance=ExtResource( 2 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="ColorRect" parent="." instance=ExtResource( 6 )]
+margin_left = 13.0
+margin_top = 7.0
+margin_right = 308.0
+margin_bottom = 162.0
+
+[node name="YouDiedLabel" parent="ColorRect" index="0"]
+margin_left = -61.8133
+margin_top = 28.7136
+margin_right = 64.1867
+margin_bottom = 64.7136
+custom_fonts/font = ExtResource( 3 )
+text = "Congratulations!
+You have defeated 
+all the bats!"
+
+[node name="ClickToRestart" parent="ColorRect" index="1"]
+margin_left = 19.4915
+margin_top = 78.4509
+margin_right = 273.492
+margin_bottom = 106.451
+
+[node name="QuitGame" parent="ColorRect" index="2"]
+margin_left = 18.4915
+margin_top = 112.451
+margin_right = 267.492
+margin_bottom = 132.451
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="ColorRect"]

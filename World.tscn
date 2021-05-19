@@ -505,6 +505,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
+debug_mode = true
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -1006,7 +1007,7 @@ margin_top = 168.0
 margin_right = 82.0
 margin_bottom = 176.0
 custom_fonts/font = ExtResource( 14 )
-text = "Alpha 0.4.2"
+text = "Alpha 0.4.3"
 __meta__ = {
 "_edit_use_anchors_": false
 }

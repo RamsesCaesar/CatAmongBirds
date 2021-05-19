@@ -4,18 +4,21 @@ I followed the Godot tutorial by HeartBeast and now I'm developing the project f
 
 **Changelog:**
 
-0.4.2.:
+0.4.3:
+- Applied new UI changes to Victory screen as well
+
+0.4.2:
 - Refactored a lot of the UI, namely the defeat screen and menu screen
 
-0.4.1.:
+0.4.1:
 - Changed main font to IBM BIOS font.
 - Added Version information in bottom left corner.
 - Changed Grass background.
 
-0.3.:
+0.3:
 - Added restart screen upon death.
 - Added Main Menu upon pressing ESC.
 
-0.2.:
+0.2:
 - Added Victory menu with sound effect.
 - Optimized code structure by using getters and setters.
