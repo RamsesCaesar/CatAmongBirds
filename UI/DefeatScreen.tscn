@@ -1,52 +1,39 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=1]
-[ext_resource path="res://UI/RestartButton.gd" type="Script" id=2]
-[ext_resource path="res://UI/icons8-refresh-24.png" type="Texture" id=3]
+[ext_resource path="res://UI/RestartButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/QuitButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=4]
 [ext_resource path="res://UI/DefeatScreen.gd" type="Script" id=5]
 
 [node name="DefeatScreen" type="Node2D"]
 script = ExtResource( 5 )
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 26.0
-margin_top = 36.0
-margin_right = 306.0
-margin_bottom = 148.0
-hint_tooltip = "Close the game"
+[node name="Control" type="Control" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -146.5
+margin_top = -58.0
+margin_right = 146.5
+margin_bottom = 59.0
+color = Color( 0.176471, 0.176471, 0.176471, 0.705882 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Panel"]
-margin_left = 13.0
-margin_top = 68.0
-margin_right = 51.0
-margin_bottom = 98.0
-color = Color( 0.403922, 0.403922, 0.403922, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RestartButton" type="Button" parent="Panel/ColorRect"]
-margin_right = 38.0
-margin_bottom = 30.0
-mouse_default_cursor_shape = 2
-icon = ExtResource( 3 )
-flat = true
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Panel"]
+[node name="YouDiedLabel" type="Label" parent="Control/ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -126.0
-margin_top = 25.0
-margin_right = 122.0
-margin_bottom = 51.0
+margin_left = -118.0
+margin_top = 8.0
+margin_right = 130.0
+margin_bottom = 34.0
 custom_fonts/font = ExtResource( 1 )
 text = "You died!"
 align = 1
@@ -54,14 +41,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Panel"]
-margin_left = 59.0
-margin_top = 76.0
-margin_right = 272.0
-margin_bottom = 100.0
+[node name="ClickToRestart" type="Control" parent="Control/ColorRect"]
+margin_left = 12.0
+margin_top = 35.0
+margin_right = 266.0
+margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClickToRestartLabel" type="Label" parent="Control/ColorRect/ClickToRestart"]
+margin_left = 45.0
+margin_top = 6.0
+margin_right = 258.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 1 )
 text = "Click to restart"
-align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" parent="Control/ColorRect/ClickToRestart" instance=ExtResource( 2 )]
+margin_left = 9.0
+margin_top = 2.5
+margin_right = 255.0
+margin_bottom = 26.5
+
+[node name="QuitGame" type="Control" parent="Control/ColorRect"]
+margin_left = 11.0
+margin_top = 69.0
+margin_right = 260.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" parent="Control/ColorRect/QuitGame" instance=ExtResource( 3 )]
+margin_left = 14.0
+margin_top = 4.0
+margin_right = 254.0
+margin_bottom = 20.0
+
+[node name="ClickToRestartLabel" type="Label" parent="Control/ColorRect/QuitGame"]
+margin_left = 47.0
+margin_top = 5.0
+margin_right = 260.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }

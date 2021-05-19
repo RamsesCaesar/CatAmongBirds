@@ -35,7 +35,7 @@ func _ready():
 
 func death():
 	queue_free()
-	get_tree().current_scene.get_node("CanvasLayer").add_child(defeatScreen.instance())
+	get_tree().current_scene.get_node("CanvasLayer/DefeatScreen").show()
 
 func _process(delta):
 	match state:
