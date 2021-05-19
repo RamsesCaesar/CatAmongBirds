@@ -3,7 +3,11 @@ An Action-RPG.
 I followed the Godot tutorial by HeartBeast and now I'm developing the project further.
 
 **Changelog:**
-0.4.:
+
+0.4.2.:
+- Refactored a lot of the UI, namely the defeat screen and menu screen
+
+0.4.1.:
 - Changed main font to IBM BIOS font.
 - Added Version information in bottom left corner.
 - Changed Grass background.
