@@ -5,7 +5,9 @@ I followed the Godot tutorial by HeartBeast and now I'm developing the project f
 **Changelog:**
 
 0.4.4:
-- Changed Grass sprite
+- Changed Grass sprite and effect
+- Changed Sand texture
+- Changed Tree and Bush sprites
 
 0.4.3:
 - Made a new player sprite that is a cat. Current color is orange, more will follow.
