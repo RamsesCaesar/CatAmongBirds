@@ -505,7 +505,6 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
-debug_mode = true
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -987,7 +986,7 @@ remote_path = NodePath("../../../Camera2D")
 margin_left = 16.0
 margin_top = 8.0
 margin_right = 77.0
-margin_bottom = 20.0
+margin_bottom = 19.0
 
 [node name="BatCounter" type="Label" parent="CanvasLayer"]
 margin_left = 208.0
@@ -1007,7 +1006,7 @@ margin_top = 168.0
 margin_right = 82.0
 margin_bottom = 176.0
 custom_fonts/font = ExtResource( 14 )
-text = "Alpha 0.4.3"
+text = "Alpha 0.4.4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
