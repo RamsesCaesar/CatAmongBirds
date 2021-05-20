@@ -1,4 +1,6 @@
 extends TextureButton
 
 func _pressed():
-	get_tree().quit()
+	PlayerStats.set_bats(0)
+	get_tree().reload_current_scene()
+	

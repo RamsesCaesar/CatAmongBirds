@@ -15,3 +15,6 @@ texture_hover = ExtResource( 2 )
 texture_disabled = ExtResource( 2 )
 texture_focused = ExtResource( 2 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

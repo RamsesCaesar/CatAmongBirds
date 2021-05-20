@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=1]
-[ext_resource path="res://UI/cancel.png" type="Texture" id=2]
-[ext_resource path="res://UI/RestartButton.gd" type="Script" id=3]
 [ext_resource path="res://UI/QuitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/RestartButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://UI/icons8-refresh-24.png" type="Texture" id=6]
 
 [node name="ColorRect" type="ColorRect"]
 anchor_left = 0.5
@@ -55,18 +52,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RestartButton" type="TextureButton" parent="ClickToRestart" instance=ExtResource( 5 )]
+[node name="RestartButton" parent="ClickToRestart" instance=ExtResource( 5 )]
 margin_left = 9.0
 margin_top = 2.5
 margin_right = 255.0
 margin_bottom = 26.5
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 6 )
-texture_hover = ExtResource( 6 )
-texture_disabled = ExtResource( 6 )
-texture_focused = ExtResource( 6 )
-script = ExtResource( 3 )
 
 [node name="QuitGame" type="Control" parent="."]
 margin_left = 11.0
@@ -77,22 +67,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="QuitButton" type="TextureButton" parent="QuitGame" instance=ExtResource( 4 )]
+[node name="QuitButton" parent="QuitGame" instance=ExtResource( 4 )]
 margin_left = 14.0
 margin_top = 4.0
 margin_right = 254.0
 margin_bottom = 20.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 2 )
-texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
-stretch_mode = 3
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ClickToRestartLabel" type="Label" parent="QuitGame"]
 margin_left = 47.0
