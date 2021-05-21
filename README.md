@@ -8,6 +8,7 @@ I followed the Godot tutorial by HeartBeast and now I'm developing the project f
 - Changed Grass sprite and effect
 - Changed Sand texture
 - Changed Tree and Bush sprites
+- Fixed bug where hearts wouldn't replenish upon restart
 
 0.4.3:
 - Made a new player sprite that is a cat. Current color is orange, more will follow.
