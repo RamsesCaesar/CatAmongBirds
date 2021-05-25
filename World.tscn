@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/GrassBackground2.png" type="Texture" id=3]
+[ext_resource path="res://World/Grass_large.png" type="Texture" id=3]
 [ext_resource path="res://World/SandTiles.png" type="Texture" id=4]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
