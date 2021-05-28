@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player2.png" type="Texture" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://Player/Sword-Hitbox.gd" type="Script" id=4]
 [ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=6]
-[ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=7]
+[ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-2.wav" type="AudioStream" id=7]
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=8]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
+[ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-3.wav" type="AudioStream" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 9 )
@@ -80,7 +81,7 @@ tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 7 )
+"stream": ExtResource( 10 )
 } ],
 "times": PoolRealArray( 0.1 )
 }
@@ -149,7 +150,7 @@ tracks/4/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 7 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=5]
@@ -216,7 +217,7 @@ tracks/4/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 7 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=6]
@@ -281,7 +282,7 @@ tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 7 )
+"stream": ExtResource( 10 )
 } ],
 "times": PoolRealArray( 0.1 )
 }
@@ -769,7 +770,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 18
+frame = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -806,7 +807,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
-rotation = 1.5708
+rotation = 3.14159
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
@@ -828,6 +829,7 @@ position = Vector2( 0, -7 )
 shape = SubResource( 48 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )

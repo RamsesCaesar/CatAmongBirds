@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soundscrate-fighting-double-air-movement-2.wav-eb7aad0887782904fd5baf53e8fc6526.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/soundscrate-fighting-double-air-movement-2.wav"
+dest_files=[ "res://.import/soundscrate-fighting-double-air-movement-2.wav-eb7aad0887782904fd5baf53e8fc6526.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
