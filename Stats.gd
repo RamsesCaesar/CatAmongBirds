@@ -26,8 +26,8 @@ func set_health(value):
 func set_bats(value):
 	bats = value
 	emit_signal("bats_changed", bats)
-	if bats <= 0:
-		get_tree().current_scene.get_node("CanvasLayer").add_child(victoryScreen.instance())
+	if bats <= 0 and get_tree().current_scene.name == "World":
+		get_tree().current_scene.get_node("CanvasLayer/VictoryScreen").show()
 		pass
 func get_bats():
 	return bats

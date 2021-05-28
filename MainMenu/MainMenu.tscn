@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/Panels/Panel.png" type="Texture" id=2]
+[ext_resource path="res://UI/Panels/Panel_highlight.png" type="Texture" id=3]
+[ext_resource path="res://MainMenu/QuitButton.gd" type="Script" id=4]
+[ext_resource path="res://MainMenu/NewGameButton.gd" type="Script" id=5]
+[ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=6]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.360784, 0.4, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+margin_left = -97.5
+margin_right = 97.5
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 6 )
+text = "Cat among Birds"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -52.0
+margin_top = -18.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="NewGameButton" type="TextureButton" parent="PanelContainer"]
+margin_right = 100.0
+margin_bottom = 11.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelContainer/NewGameButton"]
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 10.0
+custom_fonts/font = ExtResource( 1 )
+text = "New Game"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="PanelContainer"]
+anchor_top = 0.222222
+anchor_bottom = 0.222222
+margin_top = 4.0
+margin_right = 100.0
+margin_bottom = 15.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label2" type="Label" parent="PanelContainer/QuitButton"]
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 10.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PanelContainer/NewGameButton" to="PanelContainer/NewGameButton" method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="PanelContainer/QuitButton" to="PanelContainer/QuitButton" method="_on_QuitButton_pressed"]
