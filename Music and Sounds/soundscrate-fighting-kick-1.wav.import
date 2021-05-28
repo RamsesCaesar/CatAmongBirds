@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soundscrate-fighting-kick-1.wav-85be883d61b341e98f443073dea82ab3.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/soundscrate-fighting-kick-1.wav"
+dest_files=[ "res://.import/soundscrate-fighting-kick-1.wav-85be883d61b341e98f443073dea82ab3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -24,10 +24,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control"]
-margin_left = 95.0
-margin_top = 40.0
-margin_right = 212.0
-margin_bottom = 56.0
+margin_left = 98.0
+margin_top = 66.751
+margin_right = 215.0
+margin_bottom = 82.751
 custom_fonts/font = ExtResource( 1 )
 text = "Quit Game"
 __meta__ = {
@@ -35,10 +35,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="Control"]
-margin_left = 95.0
-margin_top = 69.0
-margin_right = 247.0
-margin_bottom = 85.0
+margin_left = 98.0
+margin_top = 40.924
+margin_right = 250.0
+margin_bottom = 56.924
 custom_fonts/font = ExtResource( 1 )
 text = "Restart"
 __meta__ = {
@@ -46,16 +46,16 @@ __meta__ = {
 }
 
 [node name="QuitButton" parent="Control" instance=ExtResource( 3 )]
-margin_left = 60.0
-margin_top = 40.0
-margin_right = 212.0
-margin_bottom = 56.0
+margin_left = 61.5892
+margin_top = 66.4866
+margin_right = 213.589
+margin_bottom = 82.4866
 
 [node name="RestartButton" parent="Control" instance=ExtResource( 2 )]
-margin_left = 56.0
-margin_top = 65.0
-margin_right = 213.0
-margin_bottom = 89.0
+margin_left = 58.6487
+margin_top = 37.1891
+margin_right = 215.649
+margin_bottom = 61.1891
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

@@ -11,4 +11,4 @@ func _process(delta):
 		for node in killList:
 			node.get_node("Stats").set_health(0)
 	if Input.is_action_just_pressed("ui_cancel"):
-		$CanvasLayer/DefeatScreen.visible = !$CanvasLayer/DefeatScreen.visible
+		$CanvasLayer/MainMenu.visible = !$CanvasLayer/MainMenu.visible
