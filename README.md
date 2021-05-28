@@ -1,8 +1,11 @@
-# Fox Among Bats Game
-An Action-RPG.
-I followed the Godot tutorial by HeartBeast and now I'm developing the project further.
+# Cat Among Bats Game
+A retro-style pixel-art game where you kill bats as a cat.  
+I originally made this with the Godot tutorial by the YouTuber *HeartBeast* and now I'm developing the project further.
 
-**Changelog:**
+**Changelog:**  
+0.4.5:
+- Changed Background grass
+- Changed cliff sprites
 
 0.4.4:
 - Changed Grass sprite and effect

@@ -654,7 +654,7 @@ animation = "RollUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=33]
 blend_point_0/node = SubResource( 29 )
-blend_point_0/pos = Vector2( 0, 1 )
+blend_point_0/pos = Vector2( 0, 1.1 )
 blend_point_1/node = SubResource( 30 )
 blend_point_1/pos = Vector2( 1, 0 )
 blend_point_2/node = SubResource( 31 )
@@ -712,7 +712,7 @@ states/Run/node = SubResource( 38 )
 states/Run/position = Vector2( 671, 211 )
 transitions = [ "Idle", "Run", SubResource( 39 ), "Run", "Idle", SubResource( 40 ), "Idle", "Attack", SubResource( 41 ), "Attack", "Idle", SubResource( 42 ), "Roll", "Idle", SubResource( 43 ), "Idle", "Roll", SubResource( 44 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -2, 74 )
+graph_offset = Vector2( 12, 106 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
@@ -769,7 +769,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 18
+frame = 36
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -799,15 +799,10 @@ anims/RunUp = SubResource( 18 )
 tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 46 )
-parameters/Attack/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
 parameters/Idle/blend_position = Vector2( 0, 1 )
-<<<<<<< Updated upstream
-parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0.00463676, 1.06185 )
 parameters/Run/blend_position = Vector2( 0, 1 )
-=======
-parameters/Roll/blend_position = Vector2( 0, 0 )
-parameters/Run/blend_position = Vector2( 0, 0 )
->>>>>>> Stashed changes
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
