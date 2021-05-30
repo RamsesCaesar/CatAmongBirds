@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=2]
+[gd_scene load_steps=170 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -1415,6 +1415,18 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 2/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=147]
+extents = Vector2( 488.175, 10 )
+
+[sub_resource type="RectangleShape2D" id=148]
+extents = Vector2( 10, 295.213 )
+
+[sub_resource type="RectangleShape2D" id=149]
+extents = Vector2( 483.146, 12.0504 )
+
+[sub_resource type="RectangleShape2D" id=150]
+extents = Vector2( 10, 293.325 )
+
 [node name="World" type="Node2D"]
 script = ExtResource( 12 )
 __meta__ = {
@@ -1935,6 +1947,24 @@ visible = false
 
 [node name="VictoryScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
 visible = false
+
+[node name="WorldBoundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2( 154.833, 367.685 )
+shape = SubResource( 147 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2( -293.545, 94.3874 )
+shape = SubResource( 148 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2( 174.617, -188.775 )
+shape = SubResource( 149 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2( 613.518, 94.3875 )
+shape = SubResource( 150 )
 [connection signal="visibility_changed" from="CanvasLayer/VictoryScreen" to="CanvasLayer/VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
 
 [editable path="Camera2D"]
