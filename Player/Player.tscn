@@ -664,6 +664,7 @@ blend_point_3/node = SubResource( 32 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id=34]
 animation = "RunLeft"
@@ -770,7 +771,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 32
+frame = 55
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -802,12 +803,12 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 46 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
 parameters/Idle/blend_position = Vector2( 0, 1 )
-parameters/Roll/blend_position = Vector2( 0.00463676, 1.06185 )
+parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
-rotation = 3.14159
+rotation = 1.5708
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )

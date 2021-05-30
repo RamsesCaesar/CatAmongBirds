@@ -4,6 +4,13 @@ const victoryScreen = preload("res://UI/VictoryScreen.tscn")
 export(int) var max_health = 1 setget set_max_health
 var health = max_health setget set_health
 var bats = 0 setget set_bats, get_bats
+
+enum coat {
+	ORANGE,
+	WHITE,
+	TABBY
+}
+
 #____SIGNALS: 
 signal no_health
 signal health_changed(value)
