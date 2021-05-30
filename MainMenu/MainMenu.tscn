@@ -50,12 +50,14 @@ margin_bottom = 18.0
 [node name="NewGameButton" type="TextureButton" parent="PanelContainer"]
 margin_right = 100.0
 margin_bottom = 11.0
+focus_neighbour_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
+texture_focused = ExtResource( 3 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -78,12 +80,17 @@ anchor_bottom = 0.222222
 margin_top = 4.0
 margin_right = 100.0
 margin_bottom = 15.0
+focus_neighbour_top = NodePath("../NewGameButton")
+focus_previous = NodePath("../NewGameButton")
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
+texture_focused = ExtResource( 3 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="PanelContainer/QuitButton"]
 margin_top = 2.0
