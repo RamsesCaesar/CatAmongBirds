@@ -1,7 +1,7 @@
 [gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Player/Player2.png" type="Texture" id=2]
+[ext_resource path="res://Player/Player_test.png" type="Texture" id=2]
 [ext_resource path="res://Overlap/HitBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Sword-Hitbox.gd" type="Script" id=4]
 [ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=5]
