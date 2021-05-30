@@ -96,12 +96,15 @@ tracks/0/keys = {
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 16
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 1 )
 frames = SubResource( 7 )
 animation = "Fly"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -124,6 +127,7 @@ shape = SubResource( 9 )
 max_health = 2
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color( 1, 1, 1, 0.172549 )
