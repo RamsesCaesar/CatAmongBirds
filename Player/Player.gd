@@ -97,8 +97,9 @@ func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
 	hurtbox.start_invincibility(1)
 	hurtbox.create_hit_effect()
-	var playerHurtsound = PlayerHurtSound.instance()
-	get_tree().current_scene.add_child(playerHurtsound)
+	if stats.health % 2 == 0:
+		var playerHurtsound = PlayerHurtSound.instance()
+		get_tree().current_scene.add_child(playerHurtsound)
 
 
 func _on_HurtBox_invincibility_started():
