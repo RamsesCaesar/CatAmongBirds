@@ -1627,6 +1627,24 @@ position = Vector2( -264, -72 )
 [node name="Grass35" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( -248, -72 )
 
+[node name="Grass99" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -208, -32 )
+
+[node name="Grass100" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -208, -16 )
+
+[node name="Grass101" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -192, 0 )
+
+[node name="Grass102" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -176, 0 )
+
+[node name="Grass103" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -160, 0 )
+
+[node name="Grass104" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -176, 16 )
+
 [node name="Grass36" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 48, -104 )
 
@@ -1798,6 +1816,24 @@ position = Vector2( -184, -88 )
 [node name="Grass76" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( -208, -112 )
 
+[node name="Grass93" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -192, -144 )
+
+[node name="Grass94" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -176, -144 )
+
+[node name="Grass95" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -192, -160 )
+
+[node name="Grass96" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -160, -112 )
+
+[node name="Grass97" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -160, -128 )
+
+[node name="Grass98" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -144, -112 )
+
 [node name="Trees" type="YSort" parent="YSort"]
 
 [node name="Tree" parent="YSort/Trees" instance=ExtResource( 9 )]
@@ -1861,7 +1897,7 @@ position = Vector2( 56, -136 )
 position = Vector2( 0, -136 )
 
 [node name="Tree21" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -152, -136 )
+position = Vector2( -128, -136 )
 
 [node name="Tree22" parent="YSort/Trees" instance=ExtResource( 9 )]
 position = Vector2( -256, -112 )
