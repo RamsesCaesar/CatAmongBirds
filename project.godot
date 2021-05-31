@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Fox Among Bats"
 run/main_scene="res://MainMenu/MainMenu.tscn"
-config/icon="res://World/Bush.png"
+config/icon="res://icon.png"
 
 [autoload]
 
