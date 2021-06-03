@@ -24,6 +24,10 @@ config/windows_native_icon="res://icon.ico"
 
 PlayerStats="*res://Player/PlayerStats.tscn"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/width=320
