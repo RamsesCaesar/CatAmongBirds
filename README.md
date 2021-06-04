@@ -3,6 +3,14 @@ A retro-style pixel-art game where you kill bats as a cat.
 I originally made this with the Godot tutorial by the YouTuber *HeartBeast* and now I'm developing the project further.
 
 **Changelog:**  
+
+0.5:
+- Sprite changes
+- New Sounds
+- New Main Menu at game start
+- Player can no longer leave the map
+
+
 0.4.5:
 - Changed Background grass
 - Changed cliff sprites
