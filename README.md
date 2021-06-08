@@ -10,7 +10,6 @@ I originally made this with the Godot tutorial by the YouTuber *HeartBeast* and 
 - New Main Menu at game start
 - Player can no longer leave the map
 
-
 0.4.5:
 - Changed Background grass
 - Changed cliff sprites
