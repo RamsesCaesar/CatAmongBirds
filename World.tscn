@@ -20,7 +20,6 @@
 [ext_resource path="res://World/GreyWallTiles2.png" type="Texture" id=18]
 [ext_resource path="res://UI/VictoryScreen.tscn" type="PackedScene" id=19]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "SandTiles.png 0"
 0/texture = ExtResource( 4 )
@@ -1973,7 +1972,7 @@ margin_top = 168.0
 margin_right = 82.0
 margin_bottom = 176.0
 custom_fonts/font = ExtResource( 14 )
-text = "Alpha 0.4.5"
+text = "Alpha 0.6"
 __meta__ = {
 "_edit_use_anchors_": false
 }
