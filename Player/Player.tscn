@@ -809,7 +809,7 @@ parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
-position = Vector2( 0, -4 )
+position = Vector2( -1, -8 )
 rotation = 1.5708
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
