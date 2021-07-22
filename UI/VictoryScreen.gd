@@ -8,3 +8,4 @@ func _on_Timer_timeout():
 
 func _on_VictoryScreen_visibility_changed():
 	timer.start(0.5)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if self.visible else Input.MOUSE_MODE_HIDDEN)
