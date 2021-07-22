@@ -4,6 +4,9 @@ I originally made this with the Godot tutorial by the YouTuber *HeartBeast* and 
 
 **Changelog:**  
 
+0.6 (work in progress):  
+- Cat looks better now
+
 0.5:
 - Sprite changes
 - New Sounds
