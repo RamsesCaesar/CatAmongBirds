@@ -8,8 +8,9 @@
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=6]
 [ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-2.wav" type="AudioStream" id=7]
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=8]
-[ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
+[ext_resource path="res://Effects/WhiteColor.shader" type="Shader" id=9]
 [ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-3.wav" type="AudioStream" id=10]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 9 )
