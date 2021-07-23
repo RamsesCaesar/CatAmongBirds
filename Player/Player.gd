@@ -5,18 +5,18 @@ const defeatScreen = preload("res://UI/DefeatScreen.tscn")
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 85
-export var ROLL_SPEED = 115
+export var SPRINT_SPEED = 165
 export var FRICTION = 500
 
 enum {
 	MOVE
-	ROLL
+	SPRINT
 	ATTACK
 }
 
 var state = MOVE
 var velocity = Vector2.ZERO
-var roll_vector = Vector2.DOWN
+var sprint_vector = Vector2.DOWN
 var stats = PlayerStats
 
 # Links to other Nodes further down the tree:
@@ -31,7 +31,7 @@ func _ready():
 	randomize()
 	stats.connect("no_health", self, "death")
 	animationTree.active = true
-	swordHitbox.knockback_vector = roll_vector
+	swordHitbox.knockback_vector = sprint_vector
 
 func death():
 	queue_free()
@@ -41,8 +41,8 @@ func _process(delta):
 	match state:
 		MOVE:
 			move_state(delta)
-		ROLL:
-			roll_state()
+		SPRINT:
+			sprint_state()
 		ATTACK:
 			attack_state()
 
@@ -55,12 +55,12 @@ func move_state(delta):
 
 	# acceleration:
 	if input_vector != Vector2.ZERO:
-		roll_vector = input_vector
+		sprint_vector = input_vector
 		swordHitbox.knockback_vector = input_vector
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
-		animationTree.set("parameters/Roll/blend_position", input_vector)
+		animationTree.set("parameters/Sprint/blend_position", input_vector)
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		animationState.travel("Run")
 	# stopping:
@@ -68,18 +68,18 @@ func move_state(delta):
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
-	if Input.is_action_just_pressed("roll"):
-		state = ROLL
+	if Input.is_action_just_pressed("sprint"):
+		state = SPRINT
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	move()
 # attack:
 func attack_state():
 	animationState.travel("Attack")
-#roll
-func roll_state():
-	velocity = roll_vector * ROLL_SPEED
-	animationState.travel("Roll")
+#sprint
+func sprint_state():
+	velocity = sprint_vector * SPRINT_SPEED
+	animationState.travel("Sprint")
 	move()
 	
 func move():
@@ -88,7 +88,7 @@ func move():
 func attack_animation_finished():
 	state = MOVE
 	
-func roll_animation_finished():
+func sprint_animation_finished():
 	velocity *= 0.8
 	state = MOVE
 
