@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Fox Among Bats"
-run/main_scene="res://MainMenu/MainMenu.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://UI/MainMenu/MainMenu.tscn"
+config/icon="res://Icons/icon.png"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]

@@ -4,12 +4,13 @@
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
 [ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=4]
-[ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Stats/Stats.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Overlap/HitBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Effects/WhiteColor.shader" type="Shader" id=10]
+
 
 
 [sub_resource type="ShaderMaterial" id=1]

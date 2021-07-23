@@ -5,6 +5,6 @@ func _input(event):
 		grab_focus()
 
 func _on_NewGameButton_pressed():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://World/World Scene/World.tscn")
 	PlayerStats.set_bats(0)
 	PlayerStats.set_health(4)

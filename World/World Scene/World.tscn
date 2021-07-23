@@ -9,14 +9,16 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Label.gd" type="Script" id=11]
-[ext_resource path="res://World.gd" type="Script" id=12]
+[ext_resource path="res://World/World Scene/Label.gd" type="Script" id=11]
+[ext_resource path="res://World/World Scene/World.gd" type="Script" id=12]
 [ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=13]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=14]
 [ext_resource path="res://UI/DefeatScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/MainMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World/GreyWallTiles.png" type="Texture" id=17]
 [ext_resource path="res://UI/VictoryScreen.tscn" type="PackedScene" id=19]
+
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "SandTiles.png 0"
