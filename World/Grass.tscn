@@ -4,7 +4,6 @@
 [ext_resource path="res://World/Grass.gd" type="Script" id=2]
 [ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 7 )
 
