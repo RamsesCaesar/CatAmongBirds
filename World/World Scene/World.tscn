@@ -1041,12 +1041,12 @@ margin_right = 77.0
 margin_bottom = 19.0
 
 [node name="BatCounter" type="Label" parent="CanvasLayer"]
-margin_left = 208.0
+margin_left = 180.0
 margin_top = 16.0
-margin_right = 302.0
+margin_right = 284.0
 margin_bottom = 41.0
 custom_fonts/font = ExtResource( 13 )
-text = "Bats: ?"
+text = "Birds: ?"
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

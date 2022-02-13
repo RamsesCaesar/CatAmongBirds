@@ -1,4 +1,4 @@
 extends Label
 
 func _process(delta):
-	self.text = "Bats: " + str(PlayerStats.bats)
+	self.text = "Birds: " + str(PlayerStats.bats)
