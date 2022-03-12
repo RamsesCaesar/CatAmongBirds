@@ -1,10 +1,9 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/SandTiles.png" type="Texture" id=4]
-[ext_resource path="res://World/Tree.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
@@ -921,6 +920,12 @@ position = Vector2( -160, -128 )
 [node name="Grass98" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( -144, -112 )
 
+[node name="Grass105" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 88, 184 )
+
+[node name="Grass106" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 136, 184 )
+
 [node name="Trees" type="YSort" parent="YSort"]
 
 [node name="Tree" parent="YSort/Trees" instance=ExtResource( 9 )]
@@ -1090,16 +1095,6 @@ shape = SubResource( 53 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBoundaries"]
 position = Vector2( 613.518, 94.3875 )
 shape = SubResource( 54 )
-
-[node name="Grass" parent="." instance=ExtResource( 6 )]
-position = Vector2( 136, 184 )
-
-[node name="Grass" parent="Grass" instance=ExtResource( 6 )]
-position = Vector2( -48, 0 )
-
-[node name="Tree" type="Sprite" parent="Grass"]
-position = Vector2( -8, 40 )
-texture = ExtResource( 5 )
 [connection signal="visibility_changed" from="CanvasLayer/VictoryScreen" to="CanvasLayer/VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
 
 [editable path="Camera2D"]
