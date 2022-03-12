@@ -21,5 +21,5 @@ func _on_HurtBox_area_entered(area):
 	if randomNumber == 0:
 		var newHeart = heart.instance()
 		newHeart.global_position = global_position
-		get_tree().current_scene.add_child(newHeart)
+		get_tree().current_scene.get_node("YSort").add_child(newHeart)
 	queue_free()
