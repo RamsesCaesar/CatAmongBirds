@@ -4,7 +4,11 @@ I originally made this game by following the [**ACTION-RPG TUTORIAL**](https://w
 
 **Changelog:**  
 
-0.6 (work in progress):  
+0.7 (planned / upcoming):
+- *Changing bats into birds*
+- *Adding collectible hearts that fill up health*
+
+0.6:  
 - Cat looks better now
 
 0.5:
