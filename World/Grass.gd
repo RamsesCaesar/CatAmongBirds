@@ -16,6 +16,7 @@ func create_grass_effect():
 
 func _on_HurtBox_area_entered(area):
 	create_grass_effect()
+	# Generate a collectible heart:
 	randomizer.randomize()
 	var randomNumber = randomizer.randi_range(0,6)
 	if randomNumber == 0:

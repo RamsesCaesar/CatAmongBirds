@@ -104,7 +104,6 @@ __meta__ = {
 material = SubResource( 1 )
 frames = SubResource( 7 )
 animation = "Fly"
-frame = 3
 playing = true
 offset = Vector2( 0, -12 )
 
