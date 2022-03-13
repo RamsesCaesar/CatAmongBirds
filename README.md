@@ -6,7 +6,7 @@ I originally made this game by following the [**ACTION-RPG TUTORIAL**](https://w
 
 0.7 (planned / upcoming):
 - *Changing bats into birds*
-- *Adding collectible hearts that fill up health*
+- [x] Added collectible hearts that fill up health
 
 0.6:  
 - Cat looks better now
