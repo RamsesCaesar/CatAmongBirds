@@ -17,6 +17,6 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
-	if area.name == "ItemSnatcher":
+	if area.name == "ItemSnatcher" and stats.health < stats.max_health:
 		stats.set_health(stats.health + 1)
 		queue_free()
