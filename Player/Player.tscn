@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player-Spritesheet.png" type="Texture" id=2]
@@ -704,6 +704,10 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="CapsuleShape2D" id=51]
+radius = 4.0
+height = 6.0
+
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
@@ -771,6 +775,7 @@ disabled = true
 [node name="HurtBox" parent="." instance=ExtResource( 5 )]
 visible = false
 collision_layer = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 visible = false
@@ -783,6 +788,14 @@ stream = ExtResource( 7 )
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
+
+[node name="ItemSnatcher" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 2147483712
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemSnatcher"]
+position = Vector2( -1, -4 )
+shape = SubResource( 51 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
 [connection signal="invincibility_started" from="HurtBox" to="." method="_on_HurtBox_invincibility_started"]
