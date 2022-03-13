@@ -5,7 +5,7 @@ I originally made this game by following the [**ACTION-RPG TUTORIAL**](https://w
 **Changelog:**  
 
 0.7 (planned / upcoming):
-- *Changing bats into birds*
+- [ ] *Changing bats into birds*
 - [x] Added collectible hearts that fill up health
 
 0.6:  
