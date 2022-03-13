@@ -775,7 +775,6 @@ disabled = true
 [node name="HurtBox" parent="." instance=ExtResource( 5 )]
 visible = false
 collision_layer = 4
-collision_mask = 16
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 visible = false
