@@ -16,10 +16,11 @@ func create_grass_effect():
 
 func _on_HurtBox_area_entered(area):
 	create_grass_effect()
+	# Generate a collectible heart:
 	randomizer.randomize()
 	var randomNumber = randomizer.randi_range(0,6)
 	if randomNumber == 0:
 		var newHeart = heart.instance()
-		newHeart.global_position = global_position
+		newHeart.global_position = global_position - $Sprite.offset
 		get_tree().current_scene.get_node("YSort").add_child(newHeart)
 	queue_free()
