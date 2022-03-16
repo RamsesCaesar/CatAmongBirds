@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/World Scene/Label.gd" type="Script" id=11]
 [ext_resource path="res://World/World Scene/World.gd" type="Script" id=12]
+[ext_resource path="res://Music and Sounds/BackgroundMusic.wav" type="AudioStream" id=13]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=14]
 [ext_resource path="res://UI/DefeatScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/MainMenu.tscn" type="PackedScene" id=16]
@@ -1098,6 +1099,10 @@ shape = SubResource( 54 )
 
 [node name="WorldSounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="WorldMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
 [connection signal="visibility_changed" from="CanvasLayer/VictoryScreen" to="CanvasLayer/VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
 
 [editable path="Camera2D"]
