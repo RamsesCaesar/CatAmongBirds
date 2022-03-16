@@ -1,6 +1,9 @@
 Itemize sound by Scrampunk 
 	https://freesound.org/people/Scrampunk/sounds/345297/
-Music (by Ramses Caear):
-	https://musiclab.chromeexperiments.com/Song-Maker/song/5969210437533696
-	Strings:
-	https://musiclab.chromeexperiments.com/Song-Maker/song/4918300324134912
+Music (by Ramses Caesar):
+	Song 1:
+		https://musiclab.chromeexperiments.com/Song-Maker/song/5969210437533696
+	Song 1 (Strings):
+		https://musiclab.chromeexperiments.com/Song-Maker/song/4918300324134912
+	Song 2: 
+		https://musiclab.chromeexperiments.com/Song-Maker/song/6338574739308544
