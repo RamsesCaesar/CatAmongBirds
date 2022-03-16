@@ -15,3 +15,11 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		$CanvasLayer/MainMenu.visible = !$CanvasLayer/MainMenu.visible
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if $CanvasLayer/MainMenu.visible else Input.MOUSE_MODE_HIDDEN)
+		
+
+func _on_MainMenu_toggle_music():
+	$WorldMusic.playing = !$WorldMusic.playing
+
+
+func _on_VictoryScreen_stop_music():
+	$WorldMusic.stop()

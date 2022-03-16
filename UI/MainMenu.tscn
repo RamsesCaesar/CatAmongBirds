@@ -1,17 +1,39 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonts/IBM_BIOS.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/RestartButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/QuitButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=4]
+[ext_resource path="res://UI/MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://UI/Toggle_Music_1.png" type="Texture" id=6]
+[ext_resource path="res://UI/Toggle_YES.png" type="Texture" id=7]
+[ext_resource path="res://UI/Toggle_Music_2.png" type="Texture" id=8]
+[ext_resource path="res://UI/Toggle_NO.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "NO",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "YES",
+"speed": 5.0
+} ]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Control" type="Control" parent="."]
 margin_left = 26.0
 margin_top = 36.0
 margin_right = 306.0
 margin_bottom = 148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 margin_left = 47.0
@@ -57,9 +79,28 @@ margin_top = 37.1891
 margin_right = 215.649
 margin_bottom = 61.1891
 
+[node name="TextureButton" type="TextureButton" parent="Control"]
+margin_left = 126.0
+margin_top = 68.0
+margin_right = 226.0
+margin_bottom = 168.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Control/TextureButton"]
+position = Vector2( 8, 40 )
+frames = SubResource( 1 )
+animation = "YES"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
