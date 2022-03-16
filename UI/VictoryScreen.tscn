@@ -22,6 +22,8 @@ margin_right = 308.0
 margin_bottom = 162.0
 
 [node name="YouDiedLabel" parent="ColorRect" index="0"]
+anchor_top = 0.0015309
+anchor_bottom = 0.0015309
 margin_left = -61.8133
 margin_top = 28.7136
 margin_right = 64.1867
@@ -29,7 +31,7 @@ margin_bottom = 64.7136
 custom_fonts/font = ExtResource( 3 )
 text = "Congratulations!
 You have defeated 
-all the bats!"
+all the birds!"
 
 [node name="ClickToRestart" parent="ColorRect" index="1"]
 margin_left = 19.4915
