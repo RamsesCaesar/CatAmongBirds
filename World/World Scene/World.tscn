@@ -6,7 +6,7 @@
 [ext_resource path="res://World/SandTiles.png" type="Texture" id=4]
 [ext_resource path="res://Music and Sounds/345297__scrampunk__itemize.wav" type="AudioStream" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Bird.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
