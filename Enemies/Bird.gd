@@ -68,10 +68,16 @@ func accelerate_towards_point(point, delta):
 func start_wandering():
 	state = pick_random_state([IDLE, WANDER])
 	wanderController.start_wander_timer(rand_range(1, 3))
+	$AnimatedSprite.animation = "Normal"
+	ACCELERATION = 300
+	MAX_SPEED = 50
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
 		state = CHASE
+		$AnimatedSprite.animation = "Angry"
+		ACCELERATION = 310
+		MAX_SPEED = 55
 
 func pick_random_state(state_list):
 	state_list.shuffle()
