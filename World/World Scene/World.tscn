@@ -12,7 +12,7 @@
 [ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/World Scene/Label.gd" type="Script" id=11]
 [ext_resource path="res://World/World Scene/World.gd" type="Script" id=12]
-[ext_resource path="res://Music and Sounds/BackgroundMusic.wav" type="AudioStream" id=13]
+[ext_resource path="res://Music and Sounds/Background_Strings.wav" type="AudioStream" id=13]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=14]
 [ext_resource path="res://UI/DefeatScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/MainMenu.tscn" type="PackedScene" id=16]
@@ -1102,6 +1102,7 @@ stream = ExtResource( 5 )
 
 [node name="WorldMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = -10.0
 autoplay = true
 [connection signal="visibility_changed" from="CanvasLayer/VictoryScreen" to="CanvasLayer/VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
 
