@@ -7,3 +7,5 @@ Music (by Ramses Caesar):
 		https://musiclab.chromeexperiments.com/Song-Maker/song/4918300324134912
 	Song 2: 
 		https://musiclab.chromeexperiments.com/Song-Maker/song/6338574739308544
+	Song 3:
+		https://musiclab.chromeexperiments.com/Song-Maker/song/6358386093850624
