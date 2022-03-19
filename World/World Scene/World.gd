@@ -1,7 +1,5 @@
 extends Node2D
 
-const mainMenu = preload("res://UI/MainMenu.tscn")
-
 export(bool) var debug_mode = false
 
 func _ready():
@@ -13,12 +11,12 @@ func _process(delta):
 		for node in killList:
 			node.get_node("Stats").set_health(0)
 	if Input.is_action_just_pressed("ui_cancel"):
-		$CanvasLayer/MainMenu.visible = !$CanvasLayer/MainMenu.visible
-		get_tree().paused = true if $CanvasLayer/MainMenu.visible else false
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if $CanvasLayer/MainMenu.visible else Input.MOUSE_MODE_HIDDEN)
+		$CanvasLayer/InGameMenu.visible = !$CanvasLayer/InGameMenu.visible
+		get_tree().paused = true if $CanvasLayer/InGameMenu.visible else false
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if $CanvasLayer/InGameMenu.visible else Input.MOUSE_MODE_HIDDEN)
 		
 
-func _on_MainMenu_toggle_music():
+func _on_InGameMenu_toggle_music():
 	$WorldMusic.playing = !$WorldMusic.playing
 
 
