@@ -14,6 +14,7 @@ func _process(delta):
 			node.get_node("Stats").set_health(0)
 	if Input.is_action_just_pressed("ui_cancel"):
 		$CanvasLayer/MainMenu.visible = !$CanvasLayer/MainMenu.visible
+		get_tree().paused = true if $CanvasLayer/MainMenu.visible else false
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if $CanvasLayer/MainMenu.visible else Input.MOUSE_MODE_HIDDEN)
 		
 

@@ -515,6 +515,7 @@ extents = Vector2( 483.146, 12.0504 )
 extents = Vector2( 10, 293.325 )
 
 [node name="World" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
@@ -553,6 +554,7 @@ position = Vector2( -288, -182 )
 position = Vector2( 608, 360 )
 
 [node name="YSort" type="YSort" parent="."]
+pause_mode = 1
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
