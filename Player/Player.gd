@@ -3,8 +3,8 @@ extends KinematicBody2D
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 const defeatScreen = preload("res://UI/DefeatScreen.tscn")
 
-export var ACCELERATION = 500
-export var MAX_SPEED = 85
+export var ACCELERATION = 510
+export var MAX_SPEED = 90
 export var SPRINT_SPEED = 165
 export var FRICTION = 500
 
