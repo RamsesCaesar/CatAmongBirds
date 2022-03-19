@@ -24,3 +24,7 @@ func _on_MainMenu_toggle_music():
 
 func _on_VictoryScreen_stop_music():
 	$WorldMusic.stop()
+
+
+func _on_DefeatScreen_stop_music():
+	$WorldMusic.stop()

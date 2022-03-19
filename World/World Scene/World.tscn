@@ -1106,6 +1106,7 @@ stream = ExtResource( 5 )
 stream = ExtResource( 13 )
 volume_db = -10.0
 autoplay = true
+[connection signal="stop_music" from="CanvasLayer/DefeatScreen" to="." method="_on_DefeatScreen_stop_music"]
 [connection signal="toggle_music" from="CanvasLayer/MainMenu" to="." method="_on_MainMenu_toggle_music"]
 [connection signal="stop_music" from="CanvasLayer/VictoryScreen" to="." method="_on_VictoryScreen_stop_music"]
 [connection signal="visibility_changed" from="CanvasLayer/VictoryScreen" to="CanvasLayer/VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
