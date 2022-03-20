@@ -55,10 +55,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 90.0 ]
+"values": [ 90.0, 55.0, 105.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("HitBoxPivot/Sword-Hitbox/CollisionShape2D:disabled")
@@ -725,7 +725,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 36
+frame = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -763,7 +763,7 @@ parameters/Sprint/blend_position = Vector2( 0, 0 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -6 )
-rotation = 1.5708
+rotation = 1.8326
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
@@ -785,7 +785,7 @@ position = Vector2( 0, -7 )
 shape = SubResource( 48 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 10 )
 
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )
