@@ -32,6 +32,8 @@ func _ready():
 	stats.connect("no_health", self, "death")
 	animationTree.active = true
 	swordHitbox.knockback_vector = sprint_vector
+	# Disable hitbox, because it can easily be wrongfully activated in the editor:
+	$"HitBoxPivot/Sword-Hitbox/CollisionShape2D".disabled = true
 
 func death():
 	queue_free()
