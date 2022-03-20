@@ -725,7 +725,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 18
+frame = 36
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -734,6 +734,7 @@ rotation = -1.5708
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 1.2
 anims/AttackDown = SubResource( 3 )
 anims/AttackLeft = SubResource( 4 )
 anims/AttackRight = SubResource( 5 )
