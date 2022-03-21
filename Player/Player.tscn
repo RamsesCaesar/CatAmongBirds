@@ -715,6 +715,8 @@ height = 6.0
 ]]
 collision_layer = 2
 script = ExtResource( 1 )
+ACCELERATION = 600
+MAX_SPEED = 110
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( -1, -1 )
@@ -763,7 +765,7 @@ parameters/Sprint/blend_position = Vector2( 0, 0 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -6 )
-rotation = 1.8326
+rotation = 3.14159
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
