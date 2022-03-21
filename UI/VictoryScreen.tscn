@@ -39,6 +39,9 @@ margin_top = 78.4509
 margin_right = 273.492
 margin_bottom = 106.451
 
+[node name="ClickToRestartLabel" parent="ColorRect/ClickToRestart" index="0"]
+text = "Restart"
+
 [node name="QuitGame" parent="ColorRect" index="2"]
 margin_left = 18.4915
 margin_top = 112.451

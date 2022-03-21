@@ -4,7 +4,7 @@
 [ext_resource path="res://UI/QuitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/RestartButton.tscn" type="PackedScene" id=5]
 
-[node name="ColorRect" type="ColorRect"]
+[node name="QuitResartPanel" type="ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -41,13 +41,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ClickToRestartLabel" type="Label" parent="ClickToRestart"]
+[node name="RestartLabel" type="Label" parent="ClickToRestart"]
 margin_left = 45.0
 margin_top = 6.0
 margin_right = 258.0
 margin_bottom = 22.0
 custom_fonts/font = ExtResource( 1 )
-text = "Click to restart"
+text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,7 +79,7 @@ margin_top = 5.0
 margin_right = 260.0
 margin_bottom = 21.0
 custom_fonts/font = ExtResource( 1 )
-text = "Quit Game"
+text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
