@@ -80,6 +80,7 @@ func attack_state():
 	animationState.travel("Attack")
 #sprint
 func sprint_state():
+	hurtbox.start_invincibility(0.5)
 	velocity = sprint_vector * SPRINT_SPEED
 	animationState.travel("Sprint")
 	move()
@@ -105,7 +106,8 @@ func _on_HurtBox_area_entered(area):
 
 
 func _on_HurtBox_invincibility_started():
-	blinkAnimationPlayer.play("Start")
+	if state != SPRINT:
+		blinkAnimationPlayer.play("Start")
 
 func _on_HurtBox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
