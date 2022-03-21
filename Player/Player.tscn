@@ -717,6 +717,7 @@ collision_layer = 2
 script = ExtResource( 1 )
 ACCELERATION = 600
 MAX_SPEED = 110
+SPRINT_SPEED = 300
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( -1, -1 )
