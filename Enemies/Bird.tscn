@@ -10,7 +10,7 @@
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Effects/WhiteColor.shader" type="Shader" id=10]
-[ext_resource path="res://Enemies/NewBird.png" type="Texture" id=11]
+[ext_resource path="res://Enemies/Bird.png" type="Texture" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -82,7 +82,7 @@ radius = 6.0
 length = 0.2
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Bat/Bat4:material:shader_param/active")
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -120,7 +120,6 @@ __meta__ = {
 material = SubResource( 1 )
 frames = SubResource( 10 )
 animation = "Normal"
-frame = 3
 playing = true
 offset = Vector2( 0, -12 )
 
