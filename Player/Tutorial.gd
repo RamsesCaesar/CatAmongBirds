@@ -25,16 +25,16 @@ func set_stage(input):
 	tutorial_stage = input
 	match input:
 		1:
-			yield(get_tree().create_timer(0.2), "timeout")
 			$MoveTutorial.queue_free()
 			$SwatTutorial.show()
-		2: 
-			yield(get_tree().create_timer(0.2), "timeout")
+
+		2:
 			$SwatTutorial.queue_free()
 			$SprintTutorial.show()
 		3:
-			yield(get_tree().create_timer(0.2), "timeout")
 			$SprintTutorial.queue_free()
+
+
 func get_stage():
 	return tutorial_stage
 	
