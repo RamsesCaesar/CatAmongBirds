@@ -33,22 +33,18 @@ func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	match state: 
-#________________________________________________________________________________#
 		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, 200 * delta)
 			seek_player()
 			if wanderController.get_time_left() == 0:
 				start_wandering()
-#________________________________________________________________________________#
 		WANDER:
 			seek_player()
 			if wanderController.get_time_left() == 0:
 				start_wandering()
 			accelerate_towards_point(wanderController.target_position, delta)
-			
 			if global_position.distance_to(wanderController.target_position) <= 4:
 				start_wandering()
-#________________________________________________________________________________#
 		CHASE:
 			var player = playerDetectionZone.player
 			if player != null:
