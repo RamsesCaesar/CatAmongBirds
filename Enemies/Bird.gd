@@ -7,16 +7,17 @@ enum {
 	WANDER,
 	CHASE
 }
-
+# Constants for movement:
 export var ACCELERATION = 300
 export var MAX_SPEED = 50
 export var FRICTION = 200
 
+# Variables for movement:
 var velocity = Vector2.ZERO
 var state = IDLE
 var knockback = Vector2.ZERO
 
-# node connections:
+# Nodes:
 onready var sprite = $AnimatedSprite
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
@@ -30,8 +31,10 @@ func _ready():
 	PlayerStats.set_bats(PlayerStats.get_bats() + 1)
 
 func _physics_process(delta):
+	# 1. Handle knockback:
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
+	# 2. Handle state:
 	match state: 
 		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, 200 * delta)
@@ -87,12 +90,10 @@ func _on_Stats_no_health():
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
-
-
+	
 func _on_HurtBox_invincibility_ended():
 	animationPlayer.play("Stop")
-
-
+	
 func _on_HurtBox_invincibility_started():
 	animationPlayer.play("Start")
 
