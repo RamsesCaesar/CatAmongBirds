@@ -32,8 +32,10 @@ func _ready():
 	stats.connect("no_health", self, "death")
 	animationTree.active = true
 	swordHitbox.knockback_vector = sprint_vector
-	# Disable hitbox, because it can easily be wrongfully activated in the editor:
+# Disable hitbox, because it can easily be wrongfully activated in the editor:
 	$"HitBoxPivot/Sword-Hitbox/CollisionShape2D".disabled = true
+# Disable the blinkAnimationPlayer if the game is restarted:
+	blinkAnimationPlayer.play("Stop")
 
 func death():
 	queue_free()
