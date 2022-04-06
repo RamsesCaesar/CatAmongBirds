@@ -7,7 +7,7 @@
 [ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=6]
 [ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-2.wav" type="AudioStream" id=7]
-[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=8]
+[ext_resource path="res://UI/TutorialText.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Effects/WhiteColor.shader" type="Shader" id=9]
 [ext_resource path="res://Music and Sounds/soundscrate-fighting-air-movement-3.wav" type="AudioStream" id=10]
 [ext_resource path="res://Player/Tutorial.gd" type="Script" id=11]
@@ -812,37 +812,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MoveTutorial" type="Label" parent="Tutorial"]
-margin_left = -51.8472
-margin_top = -23.1584
-margin_right = 46.1528
-margin_bottom = 6.8416
-custom_fonts/font = ExtResource( 8 )
-text = "  W        ↑
-A-S-D or ←-↓-→
-    to move"
+[node name="MoveTutorial" parent="Tutorial" instance=ExtResource( 8 )]
+margin_left = -58.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = 9.0
 
-[node name="SwatTutorial" type="Label" parent="Tutorial"]
+[node name="SwatTutorial" parent="Tutorial" instance=ExtResource( 8 )]
 visible = false
-margin_left = -38.4872
-margin_top = -12.2023
-margin_right = 20.5128
-margin_bottom = 17.7977
-custom_fonts/font = ExtResource( 8 )
+margin_left = -34.0
+margin_top = -11.0
+margin_right = 16.0
+margin_bottom = 9.0
 text = "SPACE
 to swat"
 align = 1
 
-[node name="SprintTutorial" type="Label" parent="Tutorial"]
+[node name="DashTutorial" parent="Tutorial" instance=ExtResource( 8 )]
 visible = false
-margin_left = -38.4872
-margin_top = -12.2023
-margin_right = 20.5128
-margin_bottom = 17.7977
-custom_fonts/font = ExtResource( 8 )
+margin_left = -44.0
+margin_top = -11.0
+margin_right = 26.0
+margin_bottom = 9.0
 text = "SHIFT
-to sprint"
+to dash"
 align = 1
+
+[node name="Timer" type="Timer" parent="Tutorial"]
+wait_time = 3.0
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
 [connection signal="invincibility_started" from="HurtBox" to="." method="_on_HurtBox_invincibility_started"]

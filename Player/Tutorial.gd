@@ -2,6 +2,7 @@ extends Control
 
 # Counter for tutorial:
 var tutorial_stage = 0 setget set_stage, get_stage
+var tutorial_bools = {}
 
 func _ready():
 	pass
@@ -25,14 +26,19 @@ func set_stage(input):
 	tutorial_stage = input
 	match input:
 		1:
-			$MoveTutorial.queue_free()
-			$SwatTutorial.show()
+			if tutorial_bools["MoveTutorial"] == true:
+				$MoveTutorial.queue_free() 
+			if tutorial_bools["SwatTutorial"] == true:
+				$SwatTutorial.show() 
 
 		2:
-			$SwatTutorial.queue_free()
-			$SprintTutorial.show()
+			if tutorial_bools["SwatTutorial"] == true:
+				$SwatTutorial.queue_free() 
+			if tutorial_bools["DashTutorial"] == true:
+				$DashTutorial.show()
 		3:
-			$SprintTutorial.queue_free()
+			if tutorial_bools["DashTutorial"] == true:
+				$DashTutorial.queue_free()
 
 
 func get_stage():

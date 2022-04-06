@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Player/TutorialInstructions.gd" type="Script" id=2]
+
+[node name="TutorialText" type="Label"]
+margin_left = -51.8472
+margin_top = -23.1584
+margin_right = 46.1528
+margin_bottom = 6.8416
+custom_fonts/font = ExtResource( 1 )
+text = "  W        ↑
+A-S-D or ←-↓-→
+    to move"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="visibility_changed" from="." to="." method="_on_MoveTutorial_visibility_changed"]
