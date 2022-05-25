@@ -1122,6 +1122,18 @@ frame = 2
 position = Vector2( -200, 40 )
 frame = 2
 
+[node name="Coin10" parent="YSort/Collectibles" instance=ExtResource( 18 )]
+position = Vector2( 584, 344 )
+frame = 2
+
+[node name="Coin11" parent="YSort/Collectibles" instance=ExtResource( 18 )]
+position = Vector2( 520, 232 )
+frame = 2
+
+[node name="Coin12" parent="YSort/Collectibles" instance=ExtResource( 18 )]
+position = Vector2( 560, -168 )
+frame = 2
+
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 152, 88 )
 
