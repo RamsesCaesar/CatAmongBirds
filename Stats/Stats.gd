@@ -3,7 +3,8 @@ extends Node
 const victoryScreen = preload("res://UI/VictoryScreen.tscn")
 export(int) var max_health = 1 setget set_max_health
 var health = max_health setget set_health
-var bats = 0 setget set_bats, get_bats
+var birds = 0 setget set_birds, get_birds
+var coins = 0 setget set_coins, get_coins
 
 enum coat {
 	ORANGE,
@@ -15,7 +16,6 @@ enum coat {
 signal no_health
 signal health_changed(value)
 signal max_health_changed(value)
-signal bats_changed(value)
 #____READY:_______________________________________________________________________
 func _ready(): 
 	self.health = max_health
@@ -30,12 +30,16 @@ func set_health(value):
 	if health <= 0:
 		emit_signal("no_health")
 #____BAT SET GET:_________________________________________________________________
-func set_bats(value):
-	bats = value
-	emit_signal("bats_changed", bats)
-	if bats <= 0 and get_tree().current_scene.name == "World":
+func set_birds(value):
+	birds = value
+	if birds <= 0 and get_tree().current_scene.name == "World":
 		get_tree().current_scene.get_node("CanvasLayer/VictoryScreen").show()
 		pass
-func get_bats():
-	return bats
+func get_birds():
+	return birds
+# COINS SETGET
+func set_coins(value):
+	coins = value
+func get_coins():
+	return coins
 
