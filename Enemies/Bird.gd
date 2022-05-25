@@ -28,7 +28,7 @@ onready var animationPlayer = $AnimationPlayer
 
 func _ready():
 	state =  pick_random_state([IDLE, WANDER])
-	PlayerStats.set_bats(PlayerStats.get_bats() + 1)
+	PlayerStats.set_birds(PlayerStats.get_birds() + 1)
 
 func _physics_process(delta):
 	# 1. Handle knockback:
@@ -85,7 +85,7 @@ func _on_HurtBox_area_entered(area):
 	hurtbox.start_invincibility(0.2)
 
 func _on_Stats_no_health():
-	PlayerStats.set_bats(PlayerStats.get_bats() - 1)
+	PlayerStats.set_birds(PlayerStats.get_birds() - 1)
 	queue_free()
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
