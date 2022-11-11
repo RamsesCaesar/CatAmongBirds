@@ -803,6 +803,7 @@ position = Vector2( -1, -4 )
 shape = SubResource( 51 )
 
 [node name="Tutorial" type="Control" parent="."]
+visible = false
 margin_left = 9.0
 margin_top = -32.0
 margin_right = 49.0
