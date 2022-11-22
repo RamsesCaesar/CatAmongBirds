@@ -1155,7 +1155,8 @@ margin_top = 16.0
 margin_right = 284.0
 margin_bottom = 24.0
 custom_fonts/font = ExtResource( 14 )
-text = "Birds: ?"
+text = "Birds: ?
+Coins: ?"
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
