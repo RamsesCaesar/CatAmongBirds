@@ -1096,47 +1096,44 @@ position = Vector2( -144, 192 )
 
 [node name="Coin" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 136, 168 )
-frame = 4
+frame = 0
 
 [node name="Coin2" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 120, 208 )
-frame = 4
+frame = 0
 
 [node name="Coin3" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 344, 120 )
-frame = 5
 
 [node name="Coin5" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 528, -24 )
-frame = 5
 
 [node name="Coin6" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 216, -40 )
-frame = 5
 
 [node name="Coin7" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 72, -80 )
-frame = 4
+frame = 0
 
 [node name="Coin8" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -72, -72 )
-frame = 4
+frame = 0
 
 [node name="Coin9" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -200, 40 )
-frame = 4
+frame = 0
 
 [node name="Coin10" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 584, 344 )
-frame = 4
+frame = 0
 
 [node name="Coin11" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 520, 232 )
-frame = 4
+frame = 0
 
 [node name="Coin12" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 560, -168 )
-frame = 4
+frame = 0
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 152, 88 )
@@ -1188,10 +1185,14 @@ visible = false
 [node name="BirdSmallIcon" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 215, 19 )
 texture = ExtResource( 21 )
+hframes = 2
+frame = 1
 
 [node name="CoinSmallIcon" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 214, 31 )
 texture = ExtResource( 20 )
+hframes = 2
+frame = 1
 
 [node name="WorldBoundaries" type="StaticBody2D" parent="."]
 
