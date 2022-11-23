@@ -80,7 +80,7 @@ func move_state(delta):
 # attack:
 func attack_state():
 	animationState.travel("Attack")
-#sprint
+# sprint:
 func sprint_state():
 	velocity = sprint_vector * SPRINT_SPEED
 	animationState.travel("Sprint")
