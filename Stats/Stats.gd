@@ -16,6 +16,8 @@ enum coat {
 signal no_health
 signal health_changed(value)
 signal max_health_changed(value)
+signal birds_number_changed(value)
+signal coins_collected_number_changed(value)
 #____READY:_______________________________________________________________________
 func _ready(): 
 	self.health = max_health
@@ -32,6 +34,7 @@ func set_health(value):
 #____BAT SET GET:_________________________________________________________________
 func set_birds(value):
 	birds = value
+	emit_signal("birds_number_changed", value)
 	if birds <= 0 and get_tree().current_scene.name == "World":
 		get_tree().current_scene.get_node("CanvasLayer/VictoryScreen").show()
 		pass
@@ -40,6 +43,7 @@ func get_birds():
 # COINS SETGET
 func set_coins(value):
 	coins = value
+	emit_signal("coins_collected_number_changed", value)
 func get_coins():
 	return coins
 
