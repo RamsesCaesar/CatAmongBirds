@@ -34,13 +34,11 @@ func _on_DefeatScreen_stop_music():
 const LIGHTUP_DURATION = 0.2 
 # This method makes the bird counter icon light up when birds are killed
 func bird_icon_lightup():
-	print("bird_icon_lightup")
 	bird_icon.play("lit") 
 	yield(get_tree().create_timer(LIGHTUP_DURATION), "timeout")
 	bird_icon.play("default")
 # This method makes the coin counter light up when coins are collected
 func coins_icon_lightup():
-	print("coins_icon_lightup")
 	coin_icon.play("lit")
 	yield(get_tree().create_timer(LIGHTUP_DURATION), "timeout")
 	coin_icon.play("default")
