@@ -85,6 +85,7 @@ func _on_HurtBox_area_entered(area):
 	hurtbox.start_invincibility(0.2)
 
 func _on_Stats_no_health():
+	get_tree().current_scene.bird_icon_lightup()
 	PlayerStats.set_birds(PlayerStats.get_birds() - 1)
 	queue_free()
 	var enemyDeathEffect = EnemyDeathEffect.instance()
