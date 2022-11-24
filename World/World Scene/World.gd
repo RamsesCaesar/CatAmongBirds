@@ -31,7 +31,7 @@ func _on_DefeatScreen_stop_music():
 	$WorldMusic.stop()
 	
 # UI LOGIC
-const LIGHTUP_DURATION = 0.2 
+const LIGHTUP_DURATION = 0.35
 # This method makes the bird counter icon light up when birds are killed
 func bird_icon_lightup():
 	bird_icon.play("lit") 
