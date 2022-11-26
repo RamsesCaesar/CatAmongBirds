@@ -715,9 +715,9 @@ height = 6.0
 ]]
 collision_layer = 2
 script = ExtResource( 1 )
-ACCELERATION = 600
-MAX_SPEED = 110
-SPRINT_SPEED = 250
+ACCELERATION = 580
+MAX_SPEED = 135
+SPRINT_SPEED = 240
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( -1, -1 )
@@ -728,7 +728,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 18
+frame = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -737,7 +737,7 @@ rotation = -1.5708
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_speed = 1.2
+playback_speed = 1.4
 anims/AttackDown = SubResource( 3 )
 anims/AttackLeft = SubResource( 4 )
 anims/AttackRight = SubResource( 5 )
@@ -766,7 +766,7 @@ parameters/Sprint/blend_position = Vector2( 0, 0 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -6 )
-rotation = 3.14159
+rotation = 1.5708
 
 [node name="Sword-Hitbox" parent="HitBoxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
