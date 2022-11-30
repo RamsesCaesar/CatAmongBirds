@@ -10,5 +10,5 @@ func get_push_vector():
 	if is_colliding():
 		var area = areas[0]
 		push_vector = area.global_position.direction_to(global_position)
-		#Omitted second normalization from tutorial video
+		# Omitted second normalization from tutorial video
 	return push_vector
