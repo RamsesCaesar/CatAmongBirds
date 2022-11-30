@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icons8-refresh-24.png-9557a022ed58bb05778477e97a3a8918.stex"
+path="res://.import/Bird-Small-Icon.png-b84f6118d23cc5cdc0313e6e4a9e7011.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/icons8-refresh-24.png"
-dest_files=[ "res://.import/icons8-refresh-24.png-9557a022ed58bb05778477e97a3a8918.stex" ]
+source_file="res://UI/UI Graphics/Bird-Small-Icon.png"
+dest_files=[ "res://.import/Bird-Small-Icon.png-b84f6118d23cc5cdc0313e6e4a9e7011.stex" ]
 
 [params]
 

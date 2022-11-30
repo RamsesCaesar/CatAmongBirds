@@ -14,13 +14,16 @@
 [ext_resource path="res://World/World Scene/World.gd" type="Script" id=12]
 [ext_resource path="res://Music and Sounds/Song_2.wav" type="AudioStream" id=13]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=14]
-[ext_resource path="res://UI/DefeatScreen.tscn" type="PackedScene" id=15]
+[ext_resource path="res://UI/Menus and Pop Ups/DefeatScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/Menus and Pop Ups/InGameMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World/GreyWallTiles.png" type="Texture" id=17]
 [ext_resource path="res://Collectibles/Coin.tscn" type="PackedScene" id=18]
-[ext_resource path="res://UI/VictoryScreen.tscn" type="PackedScene" id=19]
-[ext_resource path="res://UI/Coin-Small-Icon.png" type="Texture" id=20]
-[ext_resource path="res://UI/Bird-Small-Icon.png" type="Texture" id=21]
+[ext_resource path="res://UI/Menus and Pop Ups/VictoryScreen.tscn" type="PackedScene" id=19]
+[ext_resource path="res://UI/UI Graphics/Coin-Small-Icon.png" type="Texture" id=20]
+[ext_resource path="res://UI/UI Graphics/Bird-Small-Icon.png" type="Texture" id=21]
+
+
+
 
 
 [sub_resource type="TileSet" id=1]

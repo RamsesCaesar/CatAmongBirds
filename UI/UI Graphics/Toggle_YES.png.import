@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Coin-Small-Icon.png-f6b4070bed63acce8b65217d61e55741.stex"
+path="res://.import/Toggle_YES.png-7bfff9cd853d0b0c8477fe448828160a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Coin-Small-Icon.png"
-dest_files=[ "res://.import/Coin-Small-Icon.png-f6b4070bed63acce8b65217d61e55741.stex" ]
+source_file="res://UI/UI Graphics/Toggle_YES.png"
+dest_files=[ "res://.import/Toggle_YES.png-7bfff9cd853d0b0c8477fe448828160a.stex" ]
 
 [params]
 

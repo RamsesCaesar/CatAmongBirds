@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://UI/RestartButton.gd" type="Script" id=1]
-[ext_resource path="res://UI/icons8-refresh-24.png" type="Texture" id=2]
+[ext_resource path="res://UI/Buttons/RestartButton.gd" type="Script" id=1]
+[ext_resource path="res://UI/UI Graphics/icons8-refresh-24.png" type="Texture" id=2]
+
+
 
 [node name="RestartButton" type="TextureButton"]
 margin_left = 1.0

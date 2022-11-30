@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://UI/VictoryScreen.gd" type="Script" id=1]
+[ext_resource path="res://UI/Menus and Pop Ups/VictoryScreen.gd" type="Script" id=1]
 [ext_resource path="res://UI/QuitRestart.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=3]
 

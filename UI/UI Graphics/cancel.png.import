@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Toggle_Music_1.png-cdb9aa45e953efa9cb42229c86d63f01.stex"
+path="res://.import/cancel.png-1818b51f1eedbe7ab8b23b829df8a748.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Toggle_Music_1.png"
-dest_files=[ "res://.import/Toggle_Music_1.png-cdb9aa45e953efa9cb42229c86d63f01.stex" ]
+source_file="res://UI/UI Graphics/cancel.png"
+dest_files=[ "res://.import/cancel.png-1818b51f1eedbe7ab8b23b829df8a748.stex" ]
 
 [params]
 

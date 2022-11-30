@@ -1,21 +1,37 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=4]
-[ext_resource path="res://UI/VictoryScreen.gd" type="Script" id=5]
-[ext_resource path="res://UI/QuitRestart.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/QuitRestart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Music and Sounds/Victory.wav" type="AudioStream" id=3]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+onready var timer = $Timer
+signal stop_music
+
+func _on_Timer_timeout():
+	$AudioStreamPlayer.play()
+
+
+func _on_VictoryScreen_visibility_changed():
+	emit_signal(\"stop_music\")
+	timer.start(0.5)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if self.visible else Input.MOUSE_MODE_HIDDEN)
+	$ColorRect/YouDiedLabel.text += \"\\nCoins:\" + str(PlayerStats.coins) 
+"
 
 [node name="VictoryScreen" type="Node2D"]
-script = ExtResource( 5 )
+script = SubResource( 1 )
 
 [node name="VictoryFanfare" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 3 )
 mix_target = 2
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="ColorRect" parent="." instance=ExtResource( 6 )]
+[node name="ColorRect" parent="." instance=ExtResource( 2 )]
 margin_left = 13.0
 margin_top = 7.0
 margin_right = 308.0
@@ -28,7 +44,7 @@ margin_left = -61.8133
 margin_top = 28.7136
 margin_right = 64.1867
 margin_bottom = 64.7136
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
 text = "Congratulations!
 You have defeated 
 all the birds!"

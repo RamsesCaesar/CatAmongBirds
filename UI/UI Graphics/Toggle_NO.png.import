@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex"
+path="res://.import/Toggle_NO.png-340912a7a3d1f3f76d24cf0aac7226be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/HeartUIFull.png"
-dest_files=[ "res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex" ]
+source_file="res://UI/UI Graphics/Toggle_NO.png"
+dest_files=[ "res://.import/Toggle_NO.png-340912a7a3d1f3f76d24cf0aac7226be.stex" ]
 
 [params]
 

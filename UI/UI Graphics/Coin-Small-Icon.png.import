@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bird-Small-Icon.png-1e2f3bc396d13f5a8574076af536f5f0.stex"
+path="res://.import/Coin-Small-Icon.png-47b893e4a687a4a865a9352fea132b6b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Bird-Small-Icon.png"
-dest_files=[ "res://.import/Bird-Small-Icon.png-1e2f3bc396d13f5a8574076af536f5f0.stex" ]
+source_file="res://UI/UI Graphics/Coin-Small-Icon.png"
+dest_files=[ "res://.import/Coin-Small-Icon.png-47b893e4a687a4a865a9352fea132b6b.stex" ]
 
 [params]
 

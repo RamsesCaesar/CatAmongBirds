@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Toggle_YES.png-97747e29fc4ed2e9d486b87b24f6f582.stex"
+path="res://.import/icons8-refresh-24.png-f8bae8c05477b5f2c334bb4b475b8ce9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Toggle_YES.png"
-dest_files=[ "res://.import/Toggle_YES.png-97747e29fc4ed2e9d486b87b24f6f582.stex" ]
+source_file="res://UI/UI Graphics/icons8-refresh-24.png"
+dest_files=[ "res://.import/icons8-refresh-24.png-f8bae8c05477b5f2c334bb4b475b8ce9.stex" ]
 
 [params]
 
