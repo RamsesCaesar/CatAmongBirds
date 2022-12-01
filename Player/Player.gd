@@ -102,9 +102,12 @@ func sprint_animation_finished():
 
 
 func _on_HurtBox_area_entered(area):
+	# Deduct health point(s)
 	stats.health -= area.damage
+	# Start temporary invincibility.
 	hurtbox.start_invincibility(1)
 	hurtbox.create_hit_effect()
+	# Make a meow sound every second time the player (cat) takes damage.
 	if stats.health % 2 == 0:
 		var playerHurtsound = PlayerHurtSound.instance()
 		get_tree().current_scene.add_child(playerHurtsound)
