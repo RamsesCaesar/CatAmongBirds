@@ -51,7 +51,10 @@ func _physics_process(delta):
 		CHASE:
 			var player = playerDetectionZone.player
 			if player != null:
-				accelerate_towards_point(player.global_position, delta)
+				# Accelerate toward the player's position, 
+				# minus half the difference between the bird's position 
+				# and the position of its hitbox. (hence "/-2" in the code).
+				accelerate_towards_point((player.global_position + Vector2(0, $HitBox/CollisionShape2D.position.y  / -2)), delta)
 			else:
 				state = IDLE
 
