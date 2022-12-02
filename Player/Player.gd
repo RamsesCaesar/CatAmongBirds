@@ -56,19 +56,12 @@ func _process(delta):
 
 # movement:
 func move_state(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
-
+	var input_vector = determine_input_vector()
 	# acceleration:
 	if input_vector != Vector2.ZERO:
 		sprint_vector = input_vector
 		swordHitbox.knockback_vector = input_vector
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Run/blend_position", input_vector)
-		animationTree.set("parameters/Attack/blend_position", input_vector)
-		animationTree.set("parameters/Sprint/blend_position", input_vector)
+		set_animation_tree_direction(input_vector)
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		animationState.travel("Run")
 	# stopping:
@@ -118,3 +111,16 @@ func _on_HurtBox_invincibility_started():
 
 func _on_HurtBox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
+	
+func determine_input_vector():
+	var input_vector = Vector2.ZERO
+	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_vector = input_vector.normalized()
+	return input_vector
+	
+func set_animation_tree_direction(input_vector):
+	animationTree.set("parameters/Idle/blend_position", input_vector)
+	animationTree.set("parameters/Run/blend_position", input_vector)
+	animationTree.set("parameters/Attack/blend_position", input_vector)
+	animationTree.set("parameters/Sprint/blend_position", input_vector)
