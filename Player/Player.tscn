@@ -670,8 +670,8 @@ graph_offset = Vector2( 45, 36.3927 )
 height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=48]
-radius = 5.0
-height = 8.0
+radius = 5.21624
+height = 8.53148
 
 [sub_resource type="Animation" id=49]
 resource_name = "Start"
@@ -708,7 +708,7 @@ tracks/0/keys = {
 
 [sub_resource type="CapsuleShape2D" id=51]
 radius = 4.0
-height = 6.0
+height = 0.0
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -731,7 +731,6 @@ hframes = 60
 frame = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -0.193695, -2.18549 )
 rotation = -1.5708
 shape = SubResource( 2 )
@@ -779,12 +778,11 @@ shape = SubResource( 47 )
 disabled = true
 
 [node name="HurtBox" parent="." instance=ExtResource( 5 )]
-visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-visible = false
-position = Vector2( 0, -7 )
+position = Vector2( 0, -10 )
+scale = Vector2( 0.958545, 0.852264 )
 shape = SubResource( 48 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -795,11 +793,11 @@ anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
 
 [node name="ItemSnatcher" type="Area2D" parent="."]
-collision_layer = 64
+collision_layer = 0
 collision_mask = 2147483712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemSnatcher"]
-position = Vector2( -1, -4 )
+position = Vector2( 0, -4 )
 shape = SubResource( 51 )
 
 [node name="Tutorial" type="Control" parent="."]
