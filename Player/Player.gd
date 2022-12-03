@@ -82,7 +82,10 @@ func sprint_state():
 	velocity = sprint_vector * SPRINT_SPEED
 	animationState.travel("Sprint")
 	move()
-	
+
+# The move() function takes all the calculations that were made 
+# for the "velocity" variable and performs the movement of the Player scene
+# upon its parent scene.
 func move():
 	velocity = move_and_slide(velocity)
 
