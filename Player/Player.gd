@@ -89,6 +89,9 @@ func sprint_state():
 func move():
 	velocity = move_and_slide(velocity)
 
+# This function is called by the Player scene's child, AnimationPlayer, when one 
+# of the attack animations finishes. (This is a mechanism that gets set with 
+# the Godot editor rather than code).
 func attack_animation_finished():
 	state = MOVE
 	
