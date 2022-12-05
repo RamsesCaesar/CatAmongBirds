@@ -57,7 +57,8 @@ func _physics_process(delta):
 				accelerate_towards_point((player.global_position + Vector2(0, $HitBox/CollisionShape2D.position.y  / -2)), delta)
 			else:
 				state = IDLE
-
+	# Check for soft collision. SoftCollision is a child node. Its function is
+	# to repell the bird when it collides with the player.
 	if softCollision.is_colliding():
 		velocity += softCollision.get_push_vector() * delta * 400
 	velocity = move_and_slide(velocity)
