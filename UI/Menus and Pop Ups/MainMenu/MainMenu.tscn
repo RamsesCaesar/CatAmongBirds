@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/Panels/Panel_highlight.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://UI/Panels/Panel.png" type="Texture" id=4]
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/NewGameButton.gd" type="Script" id=5]
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/QuitButton.gd" type="Script" id=6]
+[ext_resource path="res://UI/Menus and Pop Ups/MainMenu/CreditsButton.tscn" type="PackedScene" id=7]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -36,6 +37,8 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CreditsButton" parent="." instance=ExtResource( 7 )]
 
 [node name="PanelContainer" type="Control" parent="."]
 anchor_left = 0.5
@@ -102,5 +105,6 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="PanelContainer/NewGameButton" to="PanelContainer/NewGameButton" method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="PanelContainer/QuitButton" to="PanelContainer/QuitButton" method="_on_QuitButton_pressed"]

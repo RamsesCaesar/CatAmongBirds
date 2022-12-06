@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Panels/Panel_highlight.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/Panels/Panel.png" type="Texture" id=3]
+[ext_resource path="res://UI/Credits/BackToMenuButton.gd" type="Script" id=4]
+
+[node name="CreditsButton" type="TextureButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -180.0
+margin_right = -220.0
+margin_bottom = -169.0
+focus_neighbour_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+texture_disabled = ExtResource( 3 )
+texture_focused = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = -4.0
+margin_right = 42.0
+margin_bottom = 4.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back to Menu"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_CreditsButton_pressed"]

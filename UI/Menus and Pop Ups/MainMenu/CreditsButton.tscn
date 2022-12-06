@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Panels/Panel_Short.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/Panels/Panel_Short_highlight.png" type="Texture" id=3]
+[ext_resource path="res://UI/Menus and Pop Ups/MainMenu/CreditsButton.gd" type="Script" id=4]
+
+[node name="CreditsButton" type="TextureButton"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -89.2415
+margin_top = -30.9424
+margin_right = -13.2415
+margin_bottom = -19.9424
+focus_neighbour_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -31.0
+margin_top = -3.84377
+margin_right = 31.0
+margin_bottom = 4.15623
+custom_fonts/font = ExtResource( 2 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
