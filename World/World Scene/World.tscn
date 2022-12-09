@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://Levels/Level Assets/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/SandTiles.png" type="Texture" id=4]
 [ext_resource path="res://Music and Sounds/345297__scrampunk__itemize.wav" type="AudioStream" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
@@ -566,15 +566,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Background" type="Sprite" parent="."]
-texture = ExtResource( 3 )
-offset = Vector2( 160, 90 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 896, 544 )
-region_filter_clip = true
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Background" parent="." instance=ExtResource( 3 )]
 
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -1138,47 +1130,39 @@ position = Vector2( -144, 192 )
 
 [node name="Coin" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 136, 168 )
-frame = 4
 
 [node name="Coin2" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 120, 208 )
-frame = 4
 
 [node name="Coin3" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 344, 120 )
-frame = 5
+frame = 3
 
 [node name="Coin5" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 528, -24 )
-frame = 5
+frame = 3
 
 [node name="Coin6" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 216, -40 )
-frame = 5
+frame = 3
 
 [node name="Coin7" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 72, -80 )
-frame = 4
 
 [node name="Coin8" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -72, -72 )
-frame = 4
 
 [node name="Coin9" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -200, 40 )
-frame = 4
 
 [node name="Coin10" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 584, 344 )
-frame = 4
 
 [node name="Coin11" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 520, 232 )
-frame = 4
 
 [node name="Coin12" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 560, -168 )
-frame = 4
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 152, 88 )
