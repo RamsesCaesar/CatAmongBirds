@@ -6,7 +6,7 @@ const defeatScreen = preload("res://UI/Menus and Pop Ups/DefeatScreen.tscn")
 export var ACCELERATION = 510
 export var MAX_SPEED = 90
 export var SPRINT_SPEED = 165
-export var FRICTION = 500
+export var FRICTION = 600
 
 enum {
 	MOVE
