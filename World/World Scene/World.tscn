@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://UI/Menus and Pop Ups/VictoryScreen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://UI/UI Graphics/Coin-Small-Icon.png" type="Texture" id=20]
 [ext_resource path="res://UI/UI Graphics/Bird-Small-Icon.png" type="Texture" id=21]
+[ext_resource path="res://Enemies/Turkey/Turkey.tscn" type="PackedScene" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "SandTiles.png 0"
@@ -1130,39 +1131,47 @@ position = Vector2( -144, 192 )
 
 [node name="Coin" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 136, 168 )
+frame = 5
 
 [node name="Coin2" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 120, 208 )
+frame = 5
 
 [node name="Coin3" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 344, 120 )
-frame = 3
+frame = 0
 
 [node name="Coin5" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 528, -24 )
-frame = 3
+frame = 0
 
 [node name="Coin6" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 216, -40 )
-frame = 3
+frame = 0
 
 [node name="Coin7" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 72, -80 )
+frame = 5
 
 [node name="Coin8" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -72, -72 )
+frame = 5
 
 [node name="Coin9" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -200, 40 )
+frame = 5
 
 [node name="Coin10" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 584, 344 )
+frame = 5
 
 [node name="Coin11" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 520, 232 )
+frame = 5
 
 [node name="Coin12" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 560, -168 )
+frame = 5
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 152, 88 )
@@ -1245,6 +1254,9 @@ stream = ExtResource( 5 )
 [node name="WorldMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 volume_db = -10.0
+
+[node name="Bird" parent="." instance=ExtResource( 22 )]
+position = Vector2( 211, 92 )
 [connection signal="stop_music" from="CanvasLayer/DefeatScreen" to="." method="_on_DefeatScreen_stop_music"]
 [connection signal="toggle_music" from="CanvasLayer/InGameMenu" to="." method="_on_InGameMenu_toggle_music"]
 [connection signal="stop_music" from="CanvasLayer/VictoryScreen" to="." method="_on_VictoryScreen_stop_music"]
