@@ -11,7 +11,7 @@ onready var timer = $Timer
 signal stop_music
 
 func _on_Timer_timeout():
-	$AudioStreamPlayer.play()
+	$VictoryFanfare.play()
 
 
 func _on_VictoryScreen_visibility_changed():
