@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Turkey_02_Standing.png-0469b712ab94028bf800d6119f029115.stex"
+path="res://.import/Turkey_03_Spritesheet.png-fcf1d75d9e4c452a13335efdc439cf33.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Turkey/Turkey_02_Standing.png"
-dest_files=[ "res://.import/Turkey_02_Standing.png-0469b712ab94028bf800d6119f029115.stex" ]
+source_file="res://Enemies/Turkey/Turkey_03_Spritesheet.png"
+dest_files=[ "res://.import/Turkey_03_Spritesheet.png-fcf1d75d9e4c452a13335efdc439cf33.stex" ]
 
 [params]
 
