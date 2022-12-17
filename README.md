@@ -5,8 +5,9 @@ I originally made this game by following the [**ACTION-RPG TUTORIAL**](https://w
 **Changelog:**  
 0.8 (unreleased):
 - Bugfixes
-- Improved UI (WIP)
+- Improved UI
 - Collectible coins
+- New Enemy type: Turkey
 
 0.7 :
 - Changed bats into birds
