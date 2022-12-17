@@ -10,61 +10,61 @@
 [ext_resource path="res://Player/Player-Spritesheet.png" type="Texture" id=8]
 [ext_resource path="res://Enemies/Bird.png" type="Texture" id=9]
 
-[sub_resource type="AtlasTexture" id=61]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=62]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 9 )
 region = Rect2( 16, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=63]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 9 )
 region = Rect2( 32, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=64]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 9 )
 region = Rect2( 48, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=66]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=67]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=68]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 8 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=69]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 8 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=70]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 8 )
 region = Rect2( 256, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 8 )
 region = Rect2( 320, 0, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=65]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "PlayerRun",
+"speed": 7.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -168,16 +168,16 @@ __meta__ = {
 
 [node name="PlayerImage" type="AnimatedSprite" parent="."]
 position = Vector2( 76.3266, 84.6331 )
-frames = SubResource( 65 )
+frames = SubResource( 11 )
 animation = "PlayerRun"
 frame = 1
 playing = true
 
 [node name="BirdImage" type="AnimatedSprite" parent="."]
 position = Vector2( 241.048, 82.9091 )
-frames = SubResource( 65 )
+frames = SubResource( 11 )
 animation = "New Anim"
-frame = 2
+frame = 3
 playing = true
 flip_h = true
 [connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_CreditsButton_pressed"]
