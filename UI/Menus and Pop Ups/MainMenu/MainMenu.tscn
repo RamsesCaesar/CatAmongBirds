@@ -97,16 +97,16 @@ motion_mirroring = Vector2( 230, 0 )
 script = ExtResource( 11 )
 scroll_speed = -12.0
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/GrassAndSkyImage"]
+[node name="GrassAndSkySprite" type="Sprite" parent="ParallaxBackground/GrassAndSkyImage"]
 position = Vector2( 162.814, 60.778 )
 texture = ExtResource( 10 )
 
 [node name="ParallaxBackground" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 230, 0 )
 script = ExtResource( 11 )
-scroll_speed = -3.0
+scroll_speed = -1.0
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxBackground"]
+[node name="CloudSprite" type="Sprite" parent="ParallaxBackground/ParallaxBackground"]
 position = Vector2( 154.385, 60.5561 )
 texture = ExtResource( 12 )
 
@@ -137,12 +137,14 @@ position = Vector2( 76.3266, 93.6149 )
 z_index = 1
 frames = SubResource( 11 )
 animation = "PlayerRun"
+frame = 3
 playing = true
 
 [node name="BirdImage" type="AnimatedSprite" parent="CanvasLayer"]
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
