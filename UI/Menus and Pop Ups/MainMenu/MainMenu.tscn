@@ -14,60 +14,60 @@
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/Clouds.png" type="Texture" id=12]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 9 )
-region = Rect2( 16, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 9 )
-region = Rect2( 32, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 9 )
-region = Rect2( 48, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 8 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 8 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 8 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 8 )
 region = Rect2( 256, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 320, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 16, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 32, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 48, 0, 16, 24 )
+
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"frames": [  ],
 "loop": true,
-"name": "New Anim",
+"name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "PlayerRun",
 "speed": 7.0
 }, {
-"frames": [  ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
-"name": "default",
+"name": "New Anim",
 "speed": 5.0
 } ]
 
@@ -84,6 +84,10 @@ layer = -100
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 0.420441
+margin_top = -0.420441
+margin_right = 0.420441
+margin_bottom = -0.420441
 color = Color( 0.843137, 0.87451, 0.627451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,14 +141,14 @@ position = Vector2( 76.3266, 93.6149 )
 z_index = 1
 frames = SubResource( 11 )
 animation = "PlayerRun"
-frame = 3
+frame = 2
 playing = true
 
 [node name="BirdImage" type="AnimatedSprite" parent="CanvasLayer"]
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -153,9 +157,11 @@ anchor_top = 0.2
 anchor_right = 0.5
 anchor_bottom = 0.2
 margin_left = -97.5
+margin_top = -0.25
 margin_right = 97.5
-margin_bottom = 16.0
+margin_bottom = 15.75
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
 text = "Cat among Birds"
 align = 1
 __meta__ = {
@@ -163,6 +169,14 @@ __meta__ = {
 }
 
 [node name="CreditsButton" parent="CanvasLayer" instance=ExtResource( 7 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = 54.5
+margin_right = 38.0
+margin_bottom = 65.5
 
 [node name="PanelContainer" type="Control" parent="CanvasLayer"]
 anchor_left = 0.5
@@ -229,6 +243,21 @@ margin_bottom = 10.0
 custom_fonts/font = ExtResource( 2 )
 text = "Quit"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -52.5
+margin_top = -61.0
+margin_right = 52.5
+margin_bottom = -53.0
+custom_fonts/font = ExtResource( 2 )
+text = "By RamsesCaesar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
