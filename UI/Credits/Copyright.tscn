@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=1]
+
+[node name="Copyright" type="Label"]
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+margin_left = -139.0
+margin_top = 94.0
+margin_right = -34.0
+margin_bottom = 124.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
+text = "Copyright 2021 
+by RamsesCaesar
+(MIT License)"
+__meta__ = {
+"_edit_use_anchors_": false
+}

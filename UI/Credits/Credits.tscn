@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/Credits/BackToMenuButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Credits/Copyright.tscn" type="PackedScene" id=3]
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -14,22 +15,46 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.356863, 0.356863, 0.356863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="ColorRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -133.0
-margin_top = -9.5
-margin_right = 133.0
-margin_bottom = 9.5
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_right = 0.831
+anchor_bottom = 0.233
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 0.0799866
+margin_bottom = 0.0599976
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Copyright" parent="ColorRect/VBoxContainer" instance=ExtResource( 3 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 266.0
+margin_bottom = 19.0
+text = "Copyright 2021 by RamsesCaesar
+(MIT License)"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+margin_top = 23.0
+margin_right = 266.0
+margin_bottom = 42.0
 custom_fonts/font = ExtResource( 1 )
 text = "\"Cat, Screaming, A.wav\" by InspectorJ 
 (www.jshaw.co.uk) of Freesound.org"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="CreditsButton" parent="." instance=ExtResource( 2 )]
+[node name="CreditsButton" parent="ColorRect" instance=ExtResource( 2 )]
 margin_left = -127.876
 margin_top = -38.3613
-margin_right = -27.8763
+margin_right = -27.876
 margin_bottom = -27.3613
