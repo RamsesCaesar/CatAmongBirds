@@ -55,11 +55,6 @@ region = Rect2( 48, 0, 16, 24 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "PlayerRun",
@@ -68,6 +63,11 @@ animations = [ {
 "frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -141,14 +141,14 @@ position = Vector2( 76.3266, 93.6149 )
 z_index = 1
 frames = SubResource( 11 )
 animation = "PlayerRun"
-frame = 2
+frame = 4
 playing = true
 
 [node name="BirdImage" type="AnimatedSprite" parent="CanvasLayer"]
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
