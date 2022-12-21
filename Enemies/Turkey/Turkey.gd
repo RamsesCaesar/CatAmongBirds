@@ -11,10 +11,14 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	match state: 
-		IDLE:
-			$AnimatedSprite.set("animation", "Standing")
-		WANDER:
-			$AnimatedSprite.set("animation", "Walking")
-		CHASE:
-			$AnimatedSprite.set("animation", "Walking")
+	if playerDetectionZone.can_see_player():
+		$AnimatedSprite.animation = "Angry"
+	else: 
+		match state: 
+			IDLE:
+				$AnimatedSprite.set("animation", "Standing")
+			WANDER:
+				$AnimatedSprite.set("animation", "Walking")
+			CHASE:
+				$AnimatedSprite.set("animation", "Walking")
+
