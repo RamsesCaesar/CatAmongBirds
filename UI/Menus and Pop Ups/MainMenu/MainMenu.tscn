@@ -13,54 +13,54 @@
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/GrassAndSkyImage.gd" type="Script" id=11]
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/Clouds.png" type="Texture" id=12]
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 9 )
 region = Rect2( 16, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 9 )
 region = Rect2( 32, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 9 )
 region = Rect2( 48, 0, 16, 24 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 8 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 8 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 8 )
 region = Rect2( 256, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 8 )
 region = Rect2( 320, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "PlayerRun",
 "speed": 7.0
@@ -148,6 +148,7 @@ playing = true
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
+frame = 3
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -159,8 +160,8 @@ margin_left = -97.5
 margin_top = -0.25
 margin_right = 97.5
 margin_bottom = 15.75
-custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
 text = "Cat among Birds"
 align = 1
 __meta__ = {
@@ -260,7 +261,6 @@ text = "By RamsesCaesar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="CanvasLayer/CreditsButton" to="CanvasLayer/CreditsButton" method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/NewGameButton" to="CanvasLayer/PanelContainer/NewGameButton" method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/QuitButton" to="CanvasLayer/PanelContainer/QuitButton" method="_on_QuitButton_pressed"]
