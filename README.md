@@ -1,7 +1,8 @@
 # Cat Among Birds
-A retro-style pixel-art game where you kill bats as a cat.  
-I originally made this game by following the [**ACTION-RPG TUTORIAL**](https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a) by the YouTuber [**HEARTBEAST**](https://www.youtube.com/c/uheartbeast). ([*Check out his GitHub*](https://github.com/uheartbeast/youtube-tutorials))<br>
-Now I'm developing the project further.
+A pixel-art game where you are a cat who hunts birds.
+
+This game is a continuation and extension of the small game I made by following the [**ACTION-RPG TUTORIAL**](https://www.youtube.com/playlist?list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a) by the YouTuber [**HEARTBEAST**](https://www.youtube.com/c/uheartbeast). ([*Check out his GitHub*](https://github.com/uheartbeast/youtube-tutorials))<br>
+The game is expected to be finished with version 1.0 in early 2023.
 
 **Changelog:**  
 0.8 (unreleased):
