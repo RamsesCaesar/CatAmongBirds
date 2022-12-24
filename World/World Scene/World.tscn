@@ -506,45 +506,45 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 21 )
-region = Rect2( 16, 0, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 21 )
+region = Rect2( 16, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=53]
 animations = [ {
-"frames": [ SubResource( 52 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 51 ) ],
 "loop": true,
 "name": "lit",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
 } ]
-
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 20 )
-region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=54]
 atlas = ExtResource( 20 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 20 )
+region = Rect2( 16, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=56]
 animations = [ {
-"frames": [ SubResource( 55 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 54 ) ],
 "loop": true,
 "name": "lit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -1127,8 +1127,14 @@ position = Vector2( 72, -48 )
 [node name="Bird11" parent="YSort/Birds" instance=ExtResource( 7 )]
 position = Vector2( -144, 192 )
 
+[node name="Turkey3" parent="YSort/Birds" instance=ExtResource( 22 )]
+position = Vector2( -40, 112 )
+
+[node name="Turkey2" parent="YSort/Birds" instance=ExtResource( 22 )]
+position = Vector2( 424, 152 )
+
 [node name="Turkey" parent="YSort/Birds" instance=ExtResource( 22 )]
-position = Vector2( 211, 92 )
+position = Vector2( 232, 104 )
 
 [node name="Collectibles" type="YSort" parent="YSort"]
 
@@ -1250,6 +1256,8 @@ stream = ExtResource( 5 )
 stream = ExtResource( 13 )
 volume_db = -10.0
 
+[node name="Turkey" parent="." instance=ExtResource( 22 )]
+position = Vector2( 56, 80 )
 [connection signal="stop_music" from="CanvasLayer/DefeatScreen" to="." method="_on_DefeatScreen_stop_music"]
 [connection signal="toggle_music" from="CanvasLayer/InGameMenu" to="." method="_on_InGameMenu_toggle_music"]
 [connection signal="stop_music" from="CanvasLayer/VictoryScreen" to="." method="_on_VictoryScreen_stop_music"]
