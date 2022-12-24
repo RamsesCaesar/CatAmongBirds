@@ -66,11 +66,11 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=11]
 radius = 6.56803
-height = 0.0
+height = 3.13907
 
 [sub_resource type="CapsuleShape2D" id=12]
-radius = 7.0
-height = 4.0
+radius = 6.40402
+height = 9.45148
 
 [sub_resource type="CircleShape2D" id=13]
 radius = 106.785
@@ -79,7 +79,7 @@ radius = 106.785
 radius = 7.57973
 
 [sub_resource type="CircleShape2D" id=15]
-radius = 6.0
+radius = 11.5536
 
 [sub_resource type="Animation" id=16]
 length = 0.2
@@ -129,7 +129,7 @@ playing = true
 offset = Vector2( 0, -12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+position = Vector2( -0.0606995, -7.16182 )
 shape = SubResource( 11 )
 
 [node name="HurtBox" parent="." instance=ExtResource( 3 )]
@@ -137,7 +137,8 @@ visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2( 0, -13 )
+position = Vector2( 1.88149, -13.1821 )
+rotation = 1.5708
 shape = SubResource( 12 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
@@ -148,6 +149,7 @@ visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color( 1, 1, 1, 0.172549 )
+position = Vector2( 0, 0.0606918 )
 shape = SubResource( 13 )
 
 [node name="HitBox" parent="." instance=ExtResource( 7 )]
@@ -162,10 +164,11 @@ shape = SubResource( 14 )
 visible = false
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
-position = Vector2( -0.0586472, 0.0134697 )
+position = Vector2( 0.487587, -15.524 )
 shape = SubResource( 15 )
 
 [node name="WanderController" parent="." instance=ExtResource( 9 )]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 16 )

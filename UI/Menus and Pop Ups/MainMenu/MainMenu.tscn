@@ -148,7 +148,7 @@ playing = true
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]

@@ -671,7 +671,7 @@ height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=48]
 radius = 5.21624
-height = 8.53148
+height = 1.76615
 
 [sub_resource type="Animation" id=49]
 resource_name = "Start"
@@ -781,7 +781,7 @@ disabled = true
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2( 0, -10 )
+position = Vector2( -0.0349426, -6.7503 )
 scale = Vector2( 0.958545, 0.852264 )
 shape = SubResource( 48 )
 
