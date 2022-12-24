@@ -12,56 +12,56 @@
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
+region = Rect2( 0, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
+region = Rect2( 64, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 64, 64 )
+region = Rect2( 128, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
-region = Rect2( 128, 0, 64, 64 )
+region = Rect2( 192, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 64, 64 )
+region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 64, 64 )
+region = Rect2( 64, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 64, 64, 64, 64 )
+region = Rect2( 128, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 128, 64, 64, 64 )
+region = Rect2( 192, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
-region = Rect2( 192, 64, 64, 64 )
+region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "Standing",
-"speed": 5.0
+"name": "Angry",
+"speed": 6.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "Walking",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 9 ) ],
 "loop": true,
-"name": "Angry",
-"speed": 6.0
+"name": "Standing",
+"speed": 1.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=11]
@@ -85,7 +85,7 @@ radius = 6.0
 length = 0.2
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/path = NodePath("../Turkey/AnimatedSprite:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -113,14 +113,16 @@ tracks/0/keys = {
 }
 
 [node name="Turkey" type="KinematicBody2D"]
+pause_mode = 1
 collision_layer = 16
 script = ExtResource( 4 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
-position = Vector2( 0, 6 )
+position = Vector2( 0, -1 )
 texture = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, -7.90699 )
 frames = SubResource( 10 )
 animation = "Standing"
 playing = true
