@@ -2,9 +2,9 @@ extends Node
 #____VARIABLES:
 const victoryScreen = preload("res://UI/Menus and Pop Ups/VictoryScreen.tscn")
 export(int) var max_health = 1 setget set_max_health
-var health = max_health setget set_health
-var birds = 0 setget set_birds, get_birds
-var coins = 0 setget set_coins, get_coins
+var             health = max_health setget set_health
+var             birds = 0 setget set_birds, get_birds
+var             coins = 0 setget set_coins, get_coins
 
 enum coat {
 	ORANGE,
