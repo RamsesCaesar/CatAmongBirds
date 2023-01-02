@@ -148,7 +148,6 @@ playing = true
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -160,8 +159,8 @@ margin_left = -97.5
 margin_top = -0.25
 margin_right = 97.5
 margin_bottom = 15.75
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
+custom_fonts/font = ExtResource( 3 )
 text = "Cat among Birds"
 align = 1
 __meta__ = {
@@ -261,6 +260,7 @@ text = "By RamsesCaesar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CanvasLayer/CreditsButton" to="CanvasLayer/CreditsButton" method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/NewGameButton" to="CanvasLayer/PanelContainer/NewGameButton" method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/QuitButton" to="CanvasLayer/PanelContainer/QuitButton" method="_on_QuitButton_pressed"]
