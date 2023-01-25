@@ -28,7 +28,6 @@ PlayerStats="*res://Player/PlayerStats.tscn"
 window/size/width=320
 window/size/height=180
 window/size/resizable=false
-window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
 window/dpi/allow_hidpi=true
@@ -116,4 +115,5 @@ debug_kill={
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
