@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+# TODO: Is it really the best design to have the DefeatScreen be a dependency
+# of Player.tscn? (RamsesCaesar 2023-03-01 13:30)
 const defeatScreen = preload("res://UI/Menus and Pop Ups/DefeatScreen.tscn")
 
 export var ACCELERATION = 510
@@ -17,9 +19,11 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var sprint_vector = Vector2.DOWN
+# TODO: It's probably a good idea to review the singleton "Stats.gd" and see if
+# it really is needed for this game. I have the suspicion that it's problematic 
+# code. (RamsesCaesar 2023-03-01 13:34)
 var stats = PlayerStats
 
-# Links to other Nodes further down the tree:
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -27,16 +31,16 @@ onready var swordHitbox = $"HitBoxPivot/Sword-Hitbox"
 onready var hurtbox = $HurtBox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
+# When the player scene is instantiated:
 func _ready():
 	randomize()
 	stats.connect("no_health", self, "death")
 	animationTree.active = true
 	swordHitbox.knockback_vector = sprint_vector
-	
-# (Disable hitbox, because it can easily be wrongfully activated in the editor:)
+	# Disable hitbox because it can easily be wrongfully activated in the 
+	# editor:
 	$"HitBoxPivot/Sword-Hitbox/CollisionShape2D".disabled = true
-	
-# (Disable the blinkAnimationPlayer if the game is restarted:)
+	# Disable the blinkAnimationPlayer if the game is restarted:
 	blinkAnimationPlayer.play("Stop")
 	
 # When the player dies:
@@ -54,30 +58,30 @@ func _process(delta):
 		ATTACK:
 			attack_state()
 
-# movement:
+# Movement:
 func move_state(delta):
 	var input_vector = determine_input_vector()
-	# acceleration:
+	# Acceleration:
 	if input_vector != Vector2.ZERO:
 		sprint_vector = input_vector
 		swordHitbox.knockback_vector = input_vector
 		set_animation_tree_direction(input_vector)
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		animationState.travel("Run")
-	# stopping:
+	# Stopping:
 	else:
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
+	# Sprinting and Attacking:
 	if Input.is_action_just_pressed("sprint"):
 		state = SPRINT
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	move()
-# attack:
+# Attack:
 func attack_state():
 	animationState.travel("Attack")
-# sprint:
+# Sprint:
 func sprint_state():
 	velocity = sprint_vector * SPRINT_SPEED
 	animationState.travel("Sprint")
@@ -85,16 +89,16 @@ func sprint_state():
 
 # The move() function takes all the calculations that were made 
 # for the "velocity" variable and performs the movement of the Player scene
-# upon its parent scene.
+# on top of its parent scene.
 func move():
 	velocity = move_and_slide(velocity)
 
-# This function is called by the Player scene's child, AnimationPlayer, when one 
+# This function is called by $AnimationPlayer when one 
 # of the attack animations finishes. (This is a mechanism that gets set with 
-# the Godot editor rather than code).
+# the Godot editor rather than here in the code).
 func attack_animation_finished():
 	state = MOVE
-	
+# This, too, is a function that gets called by $AnimationPlayer in the editor.
 func sprint_animation_finished():
 	velocity *= 0.8
 	state = MOVE
