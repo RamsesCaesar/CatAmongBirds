@@ -1,0 +1,133 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://UI/Menus and Pop Ups/DefeatScreen.gd" type="Script" id=1]
+[ext_resource path="res://UI/UI Graphics/Coin-Small-Icon.png" type="Texture" id=2]
+[ext_resource path="res://UI/UI Graphics/Bird-Small-Icon.png" type="Texture" id=3]
+[ext_resource path="res://UI/Menus and Pop Ups/InGameMenu.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=5]
+[ext_resource path="res://UI/Menus and Pop Ups/VictoryScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Menus and Pop Ups/DefeatScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Menus and Pop Ups/InGameMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/HealthUI.gd" type="Script" id=10]
+[ext_resource path="res://World/World Scene/BirdCounter.gd" type="Script" id=11]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+onready var timer = $Timer
+signal stop_music
+
+func _on_Timer_timeout():
+	$VictoryFanfare.play()
+
+
+func _on_VictoryScreen_visibility_changed():
+	emit_signal(\"stop_music\")
+	timer.start(0.5)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if self.visible else Input.MOUSE_MODE_HIDDEN)
+	$ColorRect/YouDiedLabel.text += \"\\nCoins:\" + str(PlayerStats.coins) 
+"
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=53]
+animations = [ {
+"frames": [ SubResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 51 ) ],
+"loop": true,
+"name": "lit",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=56]
+animations = [ {
+"frames": [ SubResource( 55 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 54 ) ],
+"loop": true,
+"name": "lit",
+"speed": 5.0
+} ]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="HealthUI" type="Control" parent="." instance=ExtResource( 9 )]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 77.0
+margin_bottom = 19.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollectiblesCounter" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 16.0
+margin_right = 284.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 5 )
+text = "Birds: ?
+Coins: ?"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VersionLabel" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 168.0
+margin_right = 82.0
+margin_bottom = 176.0
+custom_fonts/font = ExtResource( 5 )
+text = "Alpha 0.8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefeatScreen" type="Node2D" parent="." instance=ExtResource( 7 )]
+visible = false
+script = ExtResource( 1 )
+
+[node name="InGameMenu" type="Node2D" parent="." instance=ExtResource( 8 )]
+visible = false
+script = ExtResource( 4 )
+
+[node name="VictoryScreen" type="Node2D" parent="." instance=ExtResource( 6 )]
+visible = false
+script = SubResource( 1 )
+
+[node name="BirdSmallIcon" type="AnimatedSprite" parent="."]
+position = Vector2( 215, 19 )
+frames = SubResource( 53 )
+playing = true
+
+[node name="CoinSmallIcon" type="AnimatedSprite" parent="."]
+position = Vector2( 214, 31 )
+frames = SubResource( 56 )
+playing = true
+
+[connection signal="visibility_changed" from="DefeatScreen" to="DefeatScreen" method="_on_DefeatScreen_visibility_changed"]
+[connection signal="visibility_changed" from="VictoryScreen" to="VictoryScreen" method="_on_VictoryScreen_visibility_changed"]
