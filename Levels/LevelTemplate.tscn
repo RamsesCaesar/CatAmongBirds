@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Level Assets/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/LevelCamera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TileMaps/DirtPathTileMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileMaps/DirtCliffTileMap.tscn" type="PackedScene" id=5]
 
 [node name="LevelTemplate" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
+
+[node name="LevelCamera2D" parent="." instance=ExtResource( 3 )]
+
+[node name="DirtCliffTileMap" parent="." instance=ExtResource( 5 )]
+tile_data = PoolIntArray(  )
+
+[node name="DirtPathTileMap" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray(  )
 
 [node name="YSort" type="YSort" parent="."]
 
