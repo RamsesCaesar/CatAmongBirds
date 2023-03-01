@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Enemies/Camera2D.gd" type="Script" id=1]
 
-[node name="Camera2D" type="Camera2D"]
+[node name="LevelCamera2D" type="Camera2D"]
 position = Vector2( 160, 90 )
 current = true
 smoothing_enabled = true

@@ -9,7 +9,7 @@
 [ext_resource path="res://Enemies/Bird.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/Camera2D.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/LevelCamera2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/World Scene/BirdCounter.gd" type="Script" id=11]
 [ext_resource path="res://World/World Scene/World.gd" type="Script" id=12]
 [ext_resource path="res://Music and Sounds/Song_2.wav" type="AudioStream" id=13]
