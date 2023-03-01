@@ -17,7 +17,7 @@ var velocity = Vector2.ZERO
 var state = IDLE
 var knockback = Vector2.ZERO
 
-# Nodes:
+# Connected nodes:
 onready var sprite = $AnimatedSprite
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
@@ -28,6 +28,7 @@ onready var animationPlayer = $AnimationPlayer
 
 func _ready():
 	state =  pick_random_state([IDLE, WANDER])
+	# Count how many birds there are:
 	PlayerStats.set_birds(PlayerStats.get_birds() + 1)
 
 func _physics_process(delta):
