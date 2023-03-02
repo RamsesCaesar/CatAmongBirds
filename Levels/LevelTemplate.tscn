@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Level Assets/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/LevelCamera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileMaps/DirtPathTileMap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://TileMaps/DirtCliffTileMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=6]
 
 [node name="LevelTemplate" type="Node2D"]
 
@@ -36,5 +37,7 @@ remote_path = NodePath("../../../LevelCamera2D")
 [node name="YSort" type="YSort" parent="YSort"]
 
 [node name="YSort2" type="YSort" parent="YSort"]
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [editable path="LevelCamera2D"]
