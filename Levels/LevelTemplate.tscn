@@ -11,6 +11,13 @@
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="LevelCamera2D" parent="." instance=ExtResource( 3 )]
+process_mode = 0
+
+[node name="TopLeft" parent="LevelCamera2D/Limits" index="0"]
+position = Vector2( -287, -182 )
+
+[node name="BottomRight" parent="LevelCamera2D/Limits" index="1"]
+position = Vector2( 608, 362 )
 
 [node name="DirtCliffTileMap" parent="." instance=ExtResource( 5 )]
 tile_data = PoolIntArray(  )
@@ -21,8 +28,13 @@ tile_data = PoolIntArray(  )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 96, 48 )
+position = Vector2( 160, 90 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../LevelCamera2D")
 
 [node name="YSort" type="YSort" parent="YSort"]
 
 [node name="YSort2" type="YSort" parent="YSort"]
+
+[editable path="LevelCamera2D"]
