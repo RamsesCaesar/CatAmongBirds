@@ -22,6 +22,9 @@ var sprint_vector = Vector2.DOWN
 # TODO: It's probably a good idea to review the singleton "Stats.gd" and see if
 # it really is needed for this game. I have the suspicion that it's problematic 
 # code. (RamsesCaesar 2023-03-01 13:34)
+# This suspicion proves to be right when one compares what HeartBeast says in his 
+# video on which this game is based on: https://youtu.be/1MO8DtnxSQs?t=47
+# (RamsesCaesar 2023-03-02 19:54)
 var stats = PlayerStats
 
 onready var animationPlayer = $AnimationPlayer
