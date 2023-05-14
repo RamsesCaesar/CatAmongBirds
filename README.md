@@ -10,6 +10,7 @@ The game is expected to be finished with version 1.0 in early 2023.
 - Improved UI
 - Collectible coins
 - New Enemy type: Turkey
+- Improved animations
 
 0.7 :
 - Changed bats into birds
