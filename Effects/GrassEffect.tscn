@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Effects/Effect.gd" type="Script" id=2]
+[ext_resource path="res://Effects/EnemyDeathEffect.gd" type="Script" id=2]
 [ext_resource path="res://Effects/GrassEffect.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
