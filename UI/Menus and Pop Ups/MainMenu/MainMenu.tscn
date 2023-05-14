@@ -141,13 +141,14 @@ position = Vector2( 76.3266, 93.6149 )
 z_index = 1
 frames = SubResource( 11 )
 animation = "PlayerRun"
-frame = 4
+frame = 2
 playing = true
 
 [node name="BirdImage" type="AnimatedSprite" parent="CanvasLayer"]
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
