@@ -6,6 +6,8 @@ onready var coin_icon = $CanvasLayer/CoinSmallIcon
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	for element in get_tree().get_nodes_in_group("coins"):
+		element.playing = true;
 
 
 func _process(delta):

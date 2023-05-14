@@ -12,6 +12,7 @@
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="LevelCamera2D" parent="." instance=ExtResource( 3 )]
+current = false
 process_mode = 0
 
 [node name="TopLeft" parent="LevelCamera2D/Limits" index="0"]
