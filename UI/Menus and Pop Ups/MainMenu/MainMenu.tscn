@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://UI/Panels/Panel_highlight.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/IBM_BIOS_8.tres" type="DynamicFont" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/MainMenu-Landscape_01.png" type="Texture" id=10]
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/GrassAndSkyImage.gd" type="Script" id=11]
 [ext_resource path="res://UI/Menus and Pop Ups/MainMenu/Clouds.png" type="Texture" id=12]
+[ext_resource path="res://UI/Menus and Pop Ups/MainMenu/ForegroundElements.gd" type="Script" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
@@ -78,10 +79,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="BackgroundElements" type="CanvasLayer" parent="."]
 layer = -100
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+[node name="BackgroundPanel" type="ColorRect" parent="BackgroundElements"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 0.420441
@@ -89,43 +90,37 @@ margin_top = -0.420441
 margin_right = 0.420441
 margin_bottom = -0.420441
 color = Color( 0.843137, 0.87451, 0.627451, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -99
 
-[node name="GrassAndSkyImage" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="GrassAndSkyParallax" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 230, 0 )
 script = ExtResource( 11 )
 scroll_speed = -12.0
 
-[node name="GrassAndSkySprite" type="Sprite" parent="ParallaxBackground/GrassAndSkyImage"]
+[node name="GrassAndSkySprite" type="Sprite" parent="ParallaxBackground/GrassAndSkyParallax"]
 position = Vector2( 162.814, 60.778 )
 texture = ExtResource( 10 )
 
-[node name="ParallaxBackground" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="CloudsParallax" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 230, 0 )
 script = ExtResource( 11 )
 scroll_speed = -1.0
 
-[node name="CloudSprite" type="Sprite" parent="ParallaxBackground/ParallaxBackground"]
+[node name="CloudSprite" type="Sprite" parent="ParallaxBackground/CloudsParallax"]
 position = Vector2( 154.385, 60.5561 )
 texture = ExtResource( 12 )
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+[node name="Sidepanels" type="CanvasLayer" parent="."]
 layer = -95
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer3"]
+[node name="LeftSidePanel" type="ColorRect" parent="Sidepanels"]
 margin_right = 50.0
 margin_bottom = 180.0
 color = Color( 0.843137, 0.87451, 0.627451, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer3"]
+[node name="RightSidePanel" type="ColorRect" parent="Sidepanels"]
 margin_left = 270.0
 margin_right = 320.0
 margin_bottom = 180.0
@@ -134,24 +129,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ForegroundElements" type="CanvasLayer" parent="."]
+script = ExtResource( 13 )
 
-[node name="PlayerImage" type="AnimatedSprite" parent="CanvasLayer"]
+[node name="PlayerImage" type="AnimatedSprite" parent="ForegroundElements"]
 position = Vector2( 76.3266, 93.6149 )
 z_index = 1
 frames = SubResource( 11 )
 animation = "PlayerRun"
-frame = 2
-playing = true
 
-[node name="BirdImage" type="AnimatedSprite" parent="CanvasLayer"]
+[node name="BirdImage" type="AnimatedSprite" parent="ForegroundElements"]
 position = Vector2( 241.048, 88.0109 )
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 1
-playing = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="CatAmongBirdsLabel" type="Label" parent="ForegroundElements"]
 anchor_left = 0.5
 anchor_top = 0.2
 anchor_right = 0.5
@@ -164,21 +156,8 @@ custom_colors/font_color = Color( 0.0784314, 0.0784314, 0.301961, 0.839216 )
 custom_fonts/font = ExtResource( 3 )
 text = "Cat among Birds"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="CreditsButton" parent="CanvasLayer" instance=ExtResource( 7 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -38.0
-margin_top = 54.5
-margin_right = 38.0
-margin_bottom = 65.5
-
-[node name="PanelContainer" type="Control" parent="CanvasLayer"]
+[node name="ButtonsContanier" type="Control" parent="ForegroundElements"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -187,11 +166,8 @@ margin_left = -52.0
 margin_top = -18.0
 margin_right = 52.0
 margin_bottom = 18.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="NewGameButton" type="TextureButton" parent="CanvasLayer/PanelContainer"]
+[node name="NewGameButton" type="TextureButton" parent="ForegroundElements/ButtonsContanier"]
 margin_right = 100.0
 margin_bottom = 11.0
 focus_neighbour_bottom = NodePath("../QuitButton")
@@ -207,7 +183,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/NewGameButton"]
+[node name="NewGameLabel" type="Label" parent="ForegroundElements/ButtonsContanier/NewGameButton"]
 margin_top = 2.0
 margin_right = 104.0
 margin_bottom = 10.0
@@ -218,7 +194,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="QuitButton" type="TextureButton" parent="CanvasLayer/PanelContainer"]
+[node name="QuitButton" type="TextureButton" parent="ForegroundElements/ButtonsContanier"]
 anchor_top = 0.222222
 anchor_bottom = 0.222222
 margin_top = 4.0
@@ -236,7 +212,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/QuitButton"]
+[node name="QuitLabel" type="Label" parent="ForegroundElements/ButtonsContanier/QuitButton"]
 margin_top = 2.0
 margin_right = 104.0
 margin_bottom = 10.0
@@ -247,7 +223,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Label_ByRamsesCaesar" type="Label" parent="ForegroundElements"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -258,10 +234,20 @@ margin_right = 52.5
 margin_bottom = -53.0
 custom_fonts/font = ExtResource( 2 )
 text = "By RamsesCaesar"
+
+[node name="CreditsButton" parent="ForegroundElements" instance=ExtResource( 7 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = 54.5
+margin_right = 38.0
+margin_bottom = 65.5
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
-[connection signal="pressed" from="CanvasLayer/CreditsButton" to="CanvasLayer/CreditsButton" method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/NewGameButton" to="CanvasLayer/PanelContainer/NewGameButton" method="_on_NewGameButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/QuitButton" to="CanvasLayer/PanelContainer/QuitButton" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="ForegroundElements/ButtonsContanier/NewGameButton" to="ForegroundElements/ButtonsContanier/NewGameButton" method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="ForegroundElements/ButtonsContanier/QuitButton" to="ForegroundElements/ButtonsContanier/QuitButton" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="ForegroundElements/CreditsButton" to="ForegroundElements/CreditsButton" method="_on_CreditsButton_pressed"]
