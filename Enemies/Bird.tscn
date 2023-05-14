@@ -166,15 +166,13 @@ anims/Start = SubResource( 16 )
 anims/Stop = SubResource( 17 )
 
 [node name="DebugKill" type="Node" parent="."]
+
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
 [connection signal="invincibility_started" from="HurtBox" to="." method="_on_HurtBox_invincibility_started"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="HurtBox"]
-
 [editable path="PlayerDetectionZone"]
-
 [editable path="HitBox"]
-
 [editable path="SoftCollision"]
