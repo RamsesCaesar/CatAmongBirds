@@ -506,45 +506,45 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 21 )
-region = Rect2( 16, 0, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 21 )
+region = Rect2( 16, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=53]
 animations = [ {
-"frames": [ SubResource( 52 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 51 ) ],
 "loop": true,
 "name": "lit",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
 } ]
-
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 20 )
-region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=54]
 atlas = ExtResource( 20 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 20 )
+region = Rect2( 16, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=56]
 animations = [ {
-"frames": [ SubResource( 55 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 54 ) ],
 "loop": true,
 "name": "lit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -1140,47 +1140,44 @@ position = Vector2( 494, -117 )
 
 [node name="Coin" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 136, 168 )
-frame = 5
+frame = 1
 
 [node name="Coin2" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 120, 208 )
-frame = 5
+frame = 1
 
 [node name="Coin3" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 344, 120 )
-frame = 0
 
 [node name="Coin5" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 528, -24 )
-frame = 0
 
 [node name="Coin6" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 216, -40 )
-frame = 0
 
 [node name="Coin7" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 72, -80 )
-frame = 5
+frame = 1
 
 [node name="Coin8" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -72, -72 )
-frame = 5
+frame = 1
 
 [node name="Coin9" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( -200, 40 )
-frame = 5
+frame = 1
 
 [node name="Coin10" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 584, 344 )
-frame = 5
+frame = 1
 
 [node name="Coin11" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 520, 232 )
-frame = 5
+frame = 1
 
 [node name="Coin12" parent="YSort/Collectibles" instance=ExtResource( 18 )]
 position = Vector2( 560, -168 )
-frame = 5
+frame = 1
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 152, 88 )
@@ -1266,7 +1263,6 @@ volume_db = -10.0
 
 [node name="Turkey" parent="." instance=ExtResource( 22 )]
 position = Vector2( -239, -142 )
-
 [connection signal="stop_music" from="CanvasLayer/DefeatScreen" to="." method="_on_DefeatScreen_stop_music"]
 [connection signal="toggle_music" from="CanvasLayer/InGameMenu" to="." method="_on_InGameMenu_toggle_music"]
 [connection signal="stop_music" from="CanvasLayer/VictoryScreen" to="." method="_on_VictoryScreen_stop_music"]
