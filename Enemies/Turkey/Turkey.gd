@@ -1,8 +1,8 @@
 extends "res://Enemies/Bird.gd"
 
 func _ready():
-	stats.set_max_health(8)
-	stats.set_health(8)
+	stats.set_max_health(4)
+	stats.set_health(4)
 
 func _physics_process(delta):
 	if playerDetectionZone.can_see_player():
