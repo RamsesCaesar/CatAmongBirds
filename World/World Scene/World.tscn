@@ -1256,6 +1256,7 @@ shape = SubResource( 60 )
 
 [node name="WorldSounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -9.286
 
 [node name="WorldMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
